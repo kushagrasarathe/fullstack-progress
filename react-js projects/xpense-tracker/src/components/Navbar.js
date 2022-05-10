@@ -1,18 +1,19 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 // By passing props we can give custom properties to our component
 
 export default function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a className="navbar-brand" href="#">
+      <Link className="navbar-brand mx-4" to="/">
         
         {/* this is how we define a prop */}
         {props.title}
       
-      </a>
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -27,19 +28,19 @@ export default function Navbar(props) {
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav">
           <li className="nav-item active">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/">
               {props.link1}
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/add">
             {props.link2}
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/history">
             {props.link3}
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -51,9 +52,9 @@ export default function Navbar(props) {
 Navbar.propTypes = {
   // isRequired is passed which makes it compulsory to pass value in title prop 
   title: PropTypes.string.isRequired,
-  link1: PropTypes.string,
-  link2: PropTypes.string,
-  link3: PropTypes.string
+  link1: PropTypes.string.isRequired,
+  link2: PropTypes.string.isRequired,
+  link3: PropTypes.string.isRequired
 }
 
 // default props are defined so that a default defined value is assigned to the props if some value has not been given 
