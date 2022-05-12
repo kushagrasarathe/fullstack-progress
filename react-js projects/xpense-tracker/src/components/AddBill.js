@@ -1,29 +1,44 @@
 import React, { useState } from "react";
 
 export default function AddBill(props) {
+  const [title, setTitle] = useState("");
+  const [amount, setAmount] = useState("");
+  const [items, setItems] = useState();
 
-    const [title, setTitle] = useState('');
-    const [amount, setAmount] = useState('');
+  const saveDetails = () => {
+    // const newLi = document.createElement("li");
 
-    const saveDetails = () => {
-        console.log(`name is ${title } and amount is ${amount }`);
-      }
-      
-      const handleOnChangeTitle = (event) => {
-        console.log(`Title Saved ${title }`);
-        setTitle(event.target.value);
-      }
+    // if (title.value !== "" && amount.value !== "") {
+    //   newLi.textContent = title.value;
+    //   // newLi.textContent = amount.value;
+    //   document.querySelector(".expenseList").appendChild(newLi);
+    // } else {
+    //   alert("Please enter a details above");
+    // }
 
-      const handleOnChangeAmount = (event) => {
-        console.log(`Amount Saved ${amount }`);
-        setAmount(event.target.value);
-      }
+    console.log(`name is ${title} and amount is ${amount}`);
+    alert(`Details are ${title} & ${amount}`);
+  };
+
+  const handleOnChangeTitle = (event) => {
+    localStorage.setItem("expTitle", title);
+
+    console.log(`Title Saved ${title}`);
+    setTitle(event.target.value);
+  };
+
+  const handleOnChangeAmount = (event) => {
+    localStorage.setItem("expAmount", amount);
+    console.log(`Amount Saved ${amount}`);
+    setAmount(event.target.value);
+  };
 
   return (
-      
     <>
       <div className="card m-5 text-center text-white bg-dark">
-        <h5 className="card-header border border-3 border-secondary">{props.title}</h5>
+        <h5 className="card-header border border-3 border-secondary">
+          {props.title}
+        </h5>
         <div className="card-body border border-3 border-secondary">
           <div className="d-flex justify-content-center align-items-center h-100 card-deck">
             <form>
@@ -52,9 +67,29 @@ export default function AddBill(props) {
               </div>
 
               <div className="m-2">
-                  <button onClick={saveDetails} className="btn btn-primary">Add Expense</button>
-                </div>
+                <button onClick={saveDetails} className="btn btn-primary">
+                  Add Expense
+                </button>
+              </div>
             </form>
+          </div>
+        </div>
+      </div>
+
+      <div className="card m-5 text-center text-white bg-dark">
+        <h5 className="card-header border border-3 border-secondary">
+          Your Expenses
+        </h5>
+        <div className="card-body border border-3 border-secondary">
+          <div className="d-flex justify-content-center row align-items-center h-100 card-deck">
+            <ol className="list-group m-4 w-75  ">
+              <li className="list-group-item m-2 expenseList">
+                {props.expense}
+                <span className=" text-black">
+                  ${props.cost}
+                </span>
+              </li>
+            </ol>
           </div>
         </div>
       </div>

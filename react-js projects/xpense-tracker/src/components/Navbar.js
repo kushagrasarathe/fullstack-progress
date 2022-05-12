@@ -37,11 +37,13 @@ export default function Navbar(props) {
             {props.link2}
             </Link>
           </li>
-          <li className="nav-item">
+
+          {/* <li className="nav-item">
             <Link className="nav-link" to="/history">
             {props.link3}
             </Link>
-          </li>
+          </li> */}
+
         </ul>
       </div>
     </nav>

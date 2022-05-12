@@ -8,6 +8,7 @@ export default function (props) {
 
   const saveBudget = () => {
     setIsDisabled(!isDisabled)
+    localStorage.setItem('monthlyBudget', budget); 
     console.log(`Button clicked ${budget }`);
   }
   

@@ -44,10 +44,10 @@ function App() {
           element={<AddBill title={"Add New Expense"} />}
           ></Route>
 
-          <Route
+          {/* <Route
             path="/history"
             element={<History title={"Overall Expense History"} />}
-          ></Route>
+          ></Route> */}
 
         </Routes>
       </Router>
