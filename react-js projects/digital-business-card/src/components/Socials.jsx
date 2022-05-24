@@ -14,7 +14,7 @@ export default function Socials() {
       <a className='socialIcons' href="https://github.com/kushagrasarathe">
         <img src={github} alt="logo" />
       </a>
-      <a className='socialIcons' href="https://instagram.com/kushagrasarathe">
+      <a className='socialIcons' href="https://instagram.com/kushagra.sarathe">
         <img src={insta} alt="logo" />
       </a>
       <a className='socialIcons' href="https://linkedin.com/in/kushagrasarathe">
