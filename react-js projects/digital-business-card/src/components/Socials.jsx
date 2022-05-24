@@ -3,7 +3,7 @@ import twitter from "../assets/twitter.png";
 import github from "../assets/github.png";
 import insta from "../assets/instagram.png";
 import linkedin from "../assets/linkedin.png";
-import styles from '../App.css'
+import '../App.css'
 
 export default function Socials() {
   return (

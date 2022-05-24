@@ -9,7 +9,11 @@ export default function Info() {
 
       <h2>Kushagra Sarathe</h2>
       <p>Frontend Developer</p>
-      <a href="mailto:someone@example.com">kushagrasarathe.me</a>
+      <small> <a href="https://kushagrasarathe.me"> 
+        
+        kushagrasarathe.me
+        </a> 
+        </small>
       <br />
       
         <a href="mailto:someone@example.com">

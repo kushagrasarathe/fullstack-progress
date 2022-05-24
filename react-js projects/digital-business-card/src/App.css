@@ -33,17 +33,17 @@ justify-content: center;
 
  /* unvisited link */
  a:link {
-  color: black;
+  color: white;
 }
 
 /* visited link */
 a:visited {
-  color: black;
+  color: white;
 }
 
 /* mouse over link */
 a:hover {
-  color: black;
+  color: wheat;
 }
 
 /* selected link */
@@ -53,6 +53,7 @@ a:active {
 
 a:link {
   text-decoration: none;
+  color: white;
 }
 
 a:visited {
