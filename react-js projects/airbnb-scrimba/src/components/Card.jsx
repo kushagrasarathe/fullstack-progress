@@ -1,22 +1,21 @@
 import React from "react";
-import image1 from "../assets/image1.png";
 import star from "../assets/star.png";
 
-export default function Card() {
+export default function Card(props) {
   return (
-    <div className="card flex">
-        <img className="cardImg" src={image1} alt="" />
+    <div className="card">
+     <img className="cardImg" src={props.img} alt="" />
 
       <div className="cardContent">
         <div className="flexRow">
           <img className="star flexRow" src={star} alt="" />
-          <span className="">5.0</span>
-          <span className="gray">&nbsp;(6) •</span>
-          <span className="gray">USA</span>
+          <span className="">{props.rating}</span>
+          <span className="gray">&nbsp;{props.reviewwCount} •</span>
+          <span className="gray">{props.country}</span>
         </div>
-        <p>Life lessons with Katie Zaferes</p>
+        <p>{props.title}</p>
         <p>
-          <span className="bold">From $136</span> / person
+          <span className="bold">From ${props.price}</span> / person
         </p>
       </div>
     </div>
