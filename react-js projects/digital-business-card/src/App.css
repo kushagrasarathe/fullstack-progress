@@ -23,16 +23,15 @@ button {
   padding: auto;
   width: 247px;
   height: 34px;
-justify-content: center;
- font-size: 18px;
- background: #D1D5DB;
- margin-top: 15px;
- border-radius: 16px;
- 
+  justify-content: center;
+  font-size: 18px;
+  background: #d1d5db;
+  margin-top: 15px;
+  border-radius: 16px;
 }
 
- /* unvisited link */
- a:link {
+/* unvisited link */
+a:link {
   color: white;
 }
 
@@ -49,7 +48,7 @@ a:hover {
 /* selected link */
 a:active {
   color: black;
-} 
+}
 
 a:link {
   text-decoration: none;
@@ -78,6 +77,15 @@ a:active {
   color: white;
   background-color: #23252c;
 }
+
+/* @media only screen and (min-width: 800px) {
+  .layout {
+  flex-direction: row;
+    
+    max-width: 50%;
+  }
+  
+} */
 
 .info {
   display: flex;
@@ -109,7 +117,7 @@ a:active {
   justify-content: center;
   margin-top: 15px;
   padding: 15px;
-  background-color: #161619;;
+  background-color: #161619;
 }
 
 .socialIcons {
