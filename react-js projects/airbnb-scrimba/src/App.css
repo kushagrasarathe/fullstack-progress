@@ -76,6 +76,7 @@
 }
 
 .card {
+  position: relative;
   width: 200px;
   font-size: 16px;
 }
@@ -103,6 +104,17 @@
   flex-wrap: wrap;
   flex-direction: row;
   gap: 40px;
+}
+
+
+.card--badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
 }
 
 /* .card {
