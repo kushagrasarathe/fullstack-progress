@@ -1,2 +1,2 @@
-# 100DaysOfCode Challenge
-This repository keeps track of my 100 days of code challenge. 
+# Fullstack Developer Journey
+This repository keeps track of my fullstack developer journey.
