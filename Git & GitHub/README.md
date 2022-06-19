@@ -26,5 +26,40 @@ Visit https://github.com/settings/emails and check the `Keep my email addresses 
 email directly if you are using through website or if you are using command line git tool, you can easily set your `noreply` email using the
 config command above.
 
+### Working of Git
 
-### Setting Up Git
+Modified (files that has been modified/changed) ➤➤➤ Staged (files that have been added to staging are files that we want to commit) ➤➤➤ Commit (files that are in staging are commited when we make a commit)
+
+### Some Useful Git Commands
+
+1. Initialize a repository inside any folder
+
+```
+git init
+```
+
+**NOTE: We can initialize any folder as a git repository, the folder can either be empty or may already have some files.**
+
+2. See which files have been modified
+
+```
+git stages
+```
+
+3. Add modified files to staging
+
+```
+git add name_of_modified_file
+```
+
+4. Remove any file from staging area
+
+```
+git rm --cached path_to_file_you_want_to_remove
+```
+
+5. Add all the modified files to staging area at once
+
+```
+git add .
+```
