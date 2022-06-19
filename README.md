@@ -1,7 +1,2 @@
 # WELCOME
-Starting today ( 19/ 06/ 2022 ), I'll be working on learning fullstack development, starting from basics and will be updating this repository as I move forward with my learning. I'll also be sharing my progress over [twitter](https://twitter.com/kushagrasarathe).
-
-## Content
-
-1. Git & GitHub Basics
-[Git & GitHub Basics](https://github.com/kushagrasarathe/fullstack-progress/tree/main/Git%20%26%20GitHub)
+This repository has my react projects that I built during my first 100 Days code challenge, I've planned to rebuild these again after sometime.
