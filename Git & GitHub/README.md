@@ -84,6 +84,25 @@ git log --oneline
 
 9. See state of code in a commit ( Checkout commit )
 
+```
+git checkout commit_id_here
+```
+
+To get back to current state of code we can use
+
+```
+git checkout main
+``
+This will take us back to our present code
+
 10. Revert a commit
 
+```
+git revert commit_id_here
+```
+
 11. Reset Commit
+
+```
+git reset commit_id --hard
+```
