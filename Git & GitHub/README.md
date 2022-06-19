@@ -81,3 +81,9 @@ git log
 ```
 git log --oneline
 ```
+
+9. Checkout commit
+
+10. Revert a commit
+
+11. Reset Commit
