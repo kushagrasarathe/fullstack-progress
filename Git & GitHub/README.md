@@ -92,7 +92,7 @@ To get back to current state of code we can use
 
 ```
 git checkout main
-``
+```
 This will take us back to our present code
 
 10. Revert a commit
@@ -106,3 +106,13 @@ git revert commit_id_here
 ```
 git reset commit_id --hard
 ```
+
+12. Git Push
+The git push command pushes your code to github and you can now see your updated code on github.
+
+```
+git push origin branch_name_here
+```
+__NOTE: The default branch name is main, so if you intend to push your code to main branch, specify it in the above command__
+
+### Git Branches
