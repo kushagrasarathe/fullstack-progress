@@ -3,5 +3,4 @@ Starting today ( 19/ 06/ 2022 ), I'll be working on learning fullstack developme
 
 ## Content
 
-1. Git Basics
-[Git Basics](https://github.com/kushagrasarathe/fullstack-progress/tree/main/Git%20%26%20GitHub)
+1. [Git Basics](https://github.com/kushagrasarathe/fullstack-progress/tree/main/Git%20Basics)
