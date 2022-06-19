@@ -30,6 +30,9 @@ config command above.
 
 Modified (files that has been modified/changed) ➤➤➤ Staged (files that have been added to staging are files that we want to commit) ➤➤➤ Commit (files that are in staging are commited when we make a commit)
 
+<br>
+<hr>
+
 ### Some Useful Git Commands
 
 1. Initialize a repository inside any folder
@@ -93,6 +96,7 @@ To get back to current state of code we can use
 ```
 git checkout main
 ```
+
 This will take us back to our present code
 
 10. Revert a commit
@@ -108,11 +112,75 @@ git reset commit_id --hard
 ```
 
 12. Git Push
-The git push command pushes your code to github and you can now see your updated code on github.
+    The git push command pushes your code to github and you can now see your updated code on github.
 
 ```
 git push origin branch_name_here
 ```
-__NOTE: The default branch name is main, so if you intend to push your code to main branch, specify it in the above command__
+
+**NOTE: The default branch name is main, so if you intend to push your code to main branch, specify it in the above command**
+
+<br>
+<hr>
 
 ### Git Branches
+
+We can create multiple branches for our code that are isolated from the main branch to implement and test new features seperately without breaking our original code and later merge these branches if we want to.
+
+1. Create a new branch
+
+```
+git branch branch_name
+```
+
+2. See all the available branches
+
+```
+git branch -a
+```
+
+3. Checkout(Change) branch
+
+```
+git checkout branch_name
+```
+
+To switch back to main branch we can simply use
+
+```
+git checkout main
+```
+
+4. Delete a branch
+
+```
+git branch -D branch_name
+```
+
+**NOTE: -d flag in above command would only work if the branch has been merged with the main branch, else we have to use -D falg to delete the branch**
+
+5. Create new branch and checkout using single command
+
+```
+git checkout -b branch_name
+```
+
+### Merging Branches and Fixing Conflicts
+
+To merge brancheswe have to be on the branch in which we want to merger other branch(es)
+
+1. Merge branches
+
+To merge `v1` branch into `main` branch we will use the following command
+
+```
+git merge v1
+```
+
+2. Fixing conflicts
+
+To fix conflicts simply modify the file with conflict and then commit without a message
+
+```
+git commit
+```
