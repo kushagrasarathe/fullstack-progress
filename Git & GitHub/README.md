@@ -30,7 +30,6 @@ config command above.
 
 Modified (files that has been modified/changed) ➤➤➤ Staged (files that have been added to staging are files that we want to commit) ➤➤➤ Commit (files that are in staging are commited when we make a commit)
 
-<br>
 <hr>
 
 ### Some Useful Git Commands
@@ -120,7 +119,6 @@ git push origin branch_name_here
 
 **NOTE: The default branch name is main, so if you intend to push your code to main branch, specify it in the above command**
 
-<br>
 <hr>
 
 ### Git Branches
@@ -184,3 +182,4 @@ To fix conflicts simply modify the file with conflict and then commit without a 
 ```
 git commit
 ```
+<hr>
