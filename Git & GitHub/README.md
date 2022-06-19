@@ -63,3 +63,21 @@ git rm --cached path_to_file_you_want_to_remove
 ```
 git add .
 ```
+
+6. Make a commit
+
+```
+git commit -m "descriptive_message_here"
+```
+
+7. See all your commits
+
+```
+git log
+```
+
+8. See all commits in single lines
+
+```
+git log --oneline
+```
