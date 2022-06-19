@@ -82,7 +82,7 @@ git log
 git log --oneline
 ```
 
-9. Checkout commit
+9. See state of code in a commit ( Checkout commit )
 
 10. Revert a commit
 
