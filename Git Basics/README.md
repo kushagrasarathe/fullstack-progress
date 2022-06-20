@@ -110,16 +110,6 @@ git revert commit_id_here
 git reset commit_id --hard
 ```
 
-12. Git Push
-    The git push command pushes your code to github and you can now see your updated code on github.
-
-```
-git push origin branch_name_here
-```
-
-**NOTE: The default branch name is main, so if you intend to push your code to main branch, specify it in the above command**
-
-
 <hr>
 
 ### Working with Remote Repositories
@@ -130,10 +120,34 @@ git push origin branch_name_here
 git remote add origin your_github_repo_link_here
 ```
 
-2. CLoning a Remote Repository 
+
+2. Git Push
+    The git push command pushes your code to github and you can now see your updated code on github.
+
+```
+git push origin branch_name_here
+```
+
+**NOTE: The default branch name is main, so if you intend to push your code to main branch, specify it in the above command**
+
+3. See Configured Remote Servers
+
+```
+git remote -v
+```
+
+4. CLoning a Remote Repository 
 
 ```
 git clone remote_repository_url_here
+```
+
+5. Pull From Remote Repository
+
+This command pulls code from remote repository and merges it into `main` branch of local repository to update any changes made by other person
+
+```
+git pull origin main
 ```
 
 <hr>
