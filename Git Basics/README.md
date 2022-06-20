@@ -119,10 +119,21 @@ git push origin branch_name_here
 
 **NOTE: The default branch name is main, so if you intend to push your code to main branch, specify it in the above command**
 
-13. Adding a New Remote to local Git Repo
+
+<hr>
+
+### Working with Remote Repositories
+
+1. Adding a New Remote to local Git Repo
 
 ```
 git remote add origin your_github_repo_link_here
+```
+
+2. CLoning a Remote Repository 
+
+```
+git clone remote_repository_url_here
 ```
 
 <hr>
