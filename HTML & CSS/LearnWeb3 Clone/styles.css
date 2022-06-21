@@ -53,6 +53,8 @@ nav, .nav-list {
     align-items: center;
     padding: 10px;
     justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .about-content {
@@ -77,4 +79,38 @@ nav, .nav-list {
 .track-img {
     width: 192px;
     height: auto;
+}
+
+/* nft */
+
+.nft {
+    display: flex;
+    gap: 50px;
+    padding-top: 30px;
+}
+
+.nft-img {
+    width: 540px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.other-img {
+    width: 290px;
+    height: auto;
+}
+
+.joy-img {
+    width: 460px;
+    height: auto;
+}
+
+.win-img {
+    width: 330px;
+    height: auto;
+}
+
+.footer-img {
+    width: 20px;
+    height: 20px;
 }
