@@ -6,11 +6,33 @@
     font-family: 'Chakra Petch', sans-serif;
 }
 
-.nav-bar {
+body {
+    color: white;
+    background-color: #121429;
+}
+
+.flex {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+}
+
+.nav-logo {
     
+}
+
+.nav-item {
+    display: flex;
+    padding: 10px;
+}
+
+.about {
+    margin: 50 0px;
+}
+
+.study-img {
+    width: 350px;
+    height: auto;
 }
