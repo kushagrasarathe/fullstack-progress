@@ -11,28 +11,58 @@ body {
     background-color: #121429;
 }
 
-.flex {
+ul {
+    list-style-type: none;
+}
+
+ul > li {
+    padding: 15px;
+}
+
+nav, .nav-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-}
-
-.nav-logo {
-    
-}
-
-.nav-item {
-    display: flex;
     padding: 10px;
-}
-
-.about {
-    margin: 50 0px;
+    justify-content: space-between;
 }
 
 .study-img {
     width: 350px;
+    height: auto;
+}
+
+/* about */
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 390px;
+}
+
+/* tracks */
+
+.center {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+}
+
+.track-img {
+    width: 192px;
     height: auto;
 }
