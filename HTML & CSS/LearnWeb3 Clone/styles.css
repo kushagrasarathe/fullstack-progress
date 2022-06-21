@@ -28,12 +28,24 @@ nav, .nav-list {
     justify-content: space-between;
 }
 
-.study-img {
-    width: 350px;
-    height: auto;
+.fr {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+}
+
+.fc {
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
 }
 
 /* about */
+
+.study-img {
+    width: 400px;
+    height: auto;
+}
 
 .about {
     display: flex;
@@ -45,7 +57,7 @@ nav, .nav-list {
 
 .about-content {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     flex-wrap: wrap;
     align-items: flex-start;
     padding: 20px;
