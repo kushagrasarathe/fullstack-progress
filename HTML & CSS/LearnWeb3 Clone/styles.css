@@ -191,6 +191,13 @@ button:hover {
   );
 }
 
+.line {
+  position: relative;
+  border-left: 6px solid green;
+  height: 500px;
+  z-index: 10;
+}
+
 .track-div-right {
   display: flex;
   justify-content: flex-end;
