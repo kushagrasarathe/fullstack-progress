@@ -39,8 +39,8 @@
       <span>Pick a progression track.</span>
       <span>Do Freshman to Senior, in order, if you're new</span>
 
-      <div>
-        <div class="fr">
+      <div class="fr">
+        <div class="fr track-card">
           <img class="track-img" src="./assets/freshman.svg" alt="" />
           <div class="fc">
             <h3>1. Freshman Track</h3>
@@ -50,7 +50,7 @@
             </p>
           </div>
         </div>
-        <div class="fr">
+        <div class="fr track-card">
           <img class="track-img" src="./assets/sophomore.svg" alt="" />
           <div class="fc">
             <h3>2. Sophomore Track</h3>
@@ -60,7 +60,9 @@
             </p>
           </div>
         </div>
-        <div class="fr">
+      </div>
+      <div class="fr">
+        <div class="fr track-card">
           <img class="track-img" src="./assets/junior.svg" alt="" />
           <div class="fc">
             <h3>3. Junior Track</h3>
@@ -70,7 +72,7 @@
             </p>
           </div>
         </div>
-        <div class="fr">
+        <div class="fr track-card">
           <img class="track-img" src="./assets/senior.svg" alt="" />
           <div class="fc">
             <h3>4. Senior Track</h3>
@@ -98,10 +100,16 @@
     <div class="center">
       <h1>Learn by Doing.</h1>
       <span>Actually build cool shit.</span>
-      <div>
-        <img class="other-img" src="./assets/coding.svg" alt="" />
-        <img class="other-img" src="./assets/team.svg" alt="" />
-        <img class="other-img" src="./assets/winners.svg" alt="" />
+      <div class="fr">
+        <div class="learn-card">
+          <img class="other-img" src="./assets/coding.svg" alt="" />
+        </div>
+        <div class="learn-card">
+          <img class="other-img" src="./assets/team.svg" alt="" />
+        </div>
+        <div class="learn-card">
+          <img class="other-img" src="./assets/winners.svg" alt="" />
+        </div>
       </div>
     </div>
 
@@ -109,16 +117,20 @@
     <div class="center">
       <h1>Learn for Free.</h1>
       <span>Learn for Free.</span>
-      <div>
-        <div>
-          <h3>Forever Plan</h3>
-          <span>$0</span>
-          <div>
-            <span>$0/month forever</span>
-            <span>Unlimited amount of learning</span>
-            <span>Build cool shit</span>
+      <div class="fr">
+        <div class="fr">
+          <div class="fc">
+            <h3>Forever Plan</h3>
+            <span>$0</span>
+            <div>
+              <span class="fc">$0/month forever</span>
+              <span class="fc">Unlimited amount of learning</span>
+              <span class="fc">Build cool shit</span>
+            </div>
           </div>
-          <img class="joy-img" src="./assets/joyride.svg" alt="" />
+          <div>
+            <img class="joy-img" src="./assets/joyride.svg" alt="" />
+          </div>
           <!-- <svg
             class="h-6 w-6 text-green-500"
             stroke="currentColor"
@@ -218,7 +230,11 @@
         <img class="footer-img" src="./assets/discord.svg" alt="" />
         <img class="footer-img" src="./assets/youtube.png" alt="" />
         <img class="footer-img" src="./assets/github-light.png" alt="" />
-        <img class="footer-img" src="./assets/etherscan-logo-circle.svg" alt="" />
+        <img
+          class="footer-img"
+          src="./assets/etherscan-logo-circle.svg"
+          alt=""
+        />
       </div>
       <span>Copyright © 2022 LearnWeb3 DAO.</span>
       <span>All Rights Reserved.</span>

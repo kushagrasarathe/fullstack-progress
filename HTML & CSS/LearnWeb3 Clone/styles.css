@@ -1,116 +1,150 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;1,300;1,400&display=swap');
- 
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
 * {
-    margin: 0;
-    padding: auto;
-    font-family: 'Chakra Petch', sans-serif;
+  margin: 0;
+  padding: auto;
+  font-family: "Chakra Petch", sans-serif;
 }
 
 body {
-    color: white;
-    background-color: #121429;
+  color: white;
+  background-color: #121429;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 ul > li {
-    padding: 15px;
+  padding: 15px;
 }
 
-nav, .nav-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 10px;
-    justify-content: space-between;
+nav,
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
 }
 
 .fr {
-    display: flex;
-    flex-direction: row;
-    padding: 25px;
+  display: flex;
+  flex-direction: row;
+  padding: 25px;
 }
 
 .fc {
-    display: flex;
-    padding: 25px;
-    flex-direction: column;
+  display: flex;
+  padding: 25px;
+  flex-direction: column;
 }
 
 /* about */
 
 .study-img {
-    width: 400px;
-    height: auto;
+  width: 400px;
+  height: auto;
 }
 
 .about {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 10px;
-    justify-content: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .about-content {
-    display: flex;
-    /* flex-direction: column; */
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding: 20px;
-    max-width: 390px;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 20px;
+  max-width: 390px;
 }
 
 /* tracks */
 
 .center {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.track-card {
+  width: 700px;
+  background-image: linear-gradient(
+    to top,
+    #395bd4,
+    #3c5ed5,
+    #3f61d6,
+    #4264d6,
+    #4567d7
+  );
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  
 }
 
 .track-img {
-    width: 192px;
-    height: auto;
+  width: 192px;
+  height: auto;
 }
 
 /* nft */
 
 .nft {
-    display: flex;
-    gap: 50px;
-    padding-top: 30px;
+  display: flex;
+  gap: 50px;
+  padding-top: 30px;
 }
 
 .nft-img {
-    width: 540px;
-    height: auto;
-    border-radius: 20px;
+  width: 540px;
+  height: auto;
+  border-radius: 20px;
 }
 
 .other-img {
-    width: 290px;
-    height: auto;
+  width: 290px;
+  height: auto;
+  padding: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .joy-img {
-    width: 460px;
-    height: auto;
+  width: 460px;
+  height: auto;
 }
 
 .win-img {
-    width: 330px;
-    height: auto;
+  width: 330px;
+  height: auto;
 }
 
 .footer-img {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.learn-card {
+    margin: 20px;
+    padding: 20px;
+    background-image: linear-gradient(
+    to top,
+    #395bd4,
+    #3c5ed5,
+    #3f61d6,
+    #4264d6,
+    #4567d7
+  );
 }
