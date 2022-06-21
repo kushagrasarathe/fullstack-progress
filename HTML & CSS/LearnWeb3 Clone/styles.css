@@ -30,6 +30,13 @@ nav,
   justify-content: space-between;
 }
 
+.highlight {
+  background: #121FCF;
+background: linear-gradient(to right, #f374ec, #d06ce6, #ac65de, #865ed5, #5d57c9);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
 .fr {
   display: flex;
   flex-direction: row;
