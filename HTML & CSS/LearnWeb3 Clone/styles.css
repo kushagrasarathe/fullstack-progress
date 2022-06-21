@@ -174,7 +174,88 @@ button:hover {
   );
 }
 
+.plan {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  background-image: linear-gradient(
+    to top,
+    #18affb,
+    #00bff9,
+    #00cced,
+    #00d8db,
+    #3ee1c6
+  );
+}
+
+.freshman {
+  border-radius: 20px;
+  max-width: 610px;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  justify-items: end;
+  background-image: linear-gradient(
+    to right bottom,
+    #ff7500,
+    #ff5045,
+    #ff267b,
+    #ff1fb4,
+    #f049ec
+  );
+}
+
+.sophomore {
+  border-radius: 20px;
+  max-width: 610px;
+  margin: 20px;
+  padding: 20px;
+  background-image: linear-gradient(
+    to top,
+    #39a3ee,
+    #00b9f3,
+    #00cbea,
+    #00dcd7,
+    #54e9bf
+  );
+}
+
+.junior {
+  border-radius: 20px;
+  max-width: 610px;
+  margin: 20px;
+  padding: 20px;
+  background-image: linear-gradient(
+    to top,
+    #395bd4,
+    #3c5ed5,
+    #3f61d6,
+    #4264d6,
+    #4567d7
+  );
+}
+
+.senior {
+  border-radius: 20px;
+  max-width: 610px;
+  margin: 20px;
+  padding: 20px;
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #f09819 51%,
+    #ff512f 100%
+  );
+}
+
 .last-card {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
   margin: 20px 40px 20px 40px;
   padding: 40px;
   color: #121429;
