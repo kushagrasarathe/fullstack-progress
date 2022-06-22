@@ -24,11 +24,28 @@ The `flex-grow` property allows to grow a `flex-item`.
 
 Example:
 
-We can pass `flex-grow` property directly to flex-items and specify the rate at which we want the flex-items to grow.
+We can pass `flex-grow` property directly to flex-items and specify the rate at which we want the flex-items to grow. We have a total of 12 coulmns just like grid system.
 
 ```css
 .flex-item {
     background: aqua;
     flex-grow: 1;
+}
+```
+
+<hr/>
+
+## Flex Shrink
+
+The `flex-shrink` property allows to shrink a `flex-item`.
+
+Example:
+
+We can pass `flex-shrink` to flex-items and specify the rate at which it will shrink as the screen size decreases. The larger the rate, the more the flex-item would shrink relative to previous flex-item when screen size decreases.
+
+```css
+.flex-item {
+    background: aqua;
+    flex-shrink: 1;
 }
 ```
