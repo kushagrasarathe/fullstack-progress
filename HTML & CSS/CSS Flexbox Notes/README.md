@@ -15,3 +15,20 @@ Example:
     display: flex;
 }
 ```
+
+<hr/>
+
+## Flex Grow
+
+The `flex-grow` property allows to grow a `flex-item`.
+
+Example:
+
+We can pass `flex-grow` property directly to flex-items and specify the rate at which we want the flex-items to grow.
+
+```css
+.flex-item {
+    background: aqua;
+    flex-grow: 1;
+}
+```

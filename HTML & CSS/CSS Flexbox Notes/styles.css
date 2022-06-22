@@ -9,11 +9,12 @@ body {
 .wrapper {
     width: 100%;
     max-width: 960px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 .flex-container {
     display: flex;
+    background: white;
 }
 
 .box {
@@ -23,12 +24,15 @@ body {
 
 .one {
     background: aqua;
+    flex-grow: 1;
 }
 
 .two {
     background: whitesmoke;
+    flex-grow: 1;
 }
 
 .three {
     background: salmon;
+    flex-grow: 1;
 }
