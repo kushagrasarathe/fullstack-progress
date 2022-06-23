@@ -1,5 +1,17 @@
 * {
     margin: 0;
     background: rgb(30, 30, 31);
-    color: white;
+    color: wheat;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    justify-items: center;
+    align-items: center;
+    align-content: space-between;
+}
+
+.nav-logo {
+    margin-right: auto;
 }
