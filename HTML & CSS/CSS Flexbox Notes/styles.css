@@ -14,28 +14,33 @@ body {
 
 .flex-container {
     display: flex;
-    background: white;
+    background: rgb(35, 36, 36);
+    flex-wrap: wrap;
 }
 
 .box {
     height: 100px;
-    width: 320px;
+    /* use with shrink */
+    /* width: 200px; */  
+    /* use with grow or wrap */
+    min-width: 200px; 
+    flex-grow: 1;
 }
 
 .one {
     background: aqua;
     /* flex-grow: 1; */
-    flex-shrink: 1;
+    /* flex-shrink: 1; */
 }
 
 .two {
     background: whitesmoke;
     /* flex-grow: 1; */
-    flex-shrink: 2;
+    /* flex-shrink: 2; */
 }
 
 .three {
     background: salmon;
     /* flex-grow: 1; */
-    flex-shrink: 3;
+    /* flex-shrink: 3; */
 }
