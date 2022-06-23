@@ -1,10 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+
 * {
     margin: 0;
-    background: rgb(30, 30, 31);
-    color: wheat;
+    color: black;
+}
+
+body {
+    background: rgb(250, 250, 250);
+    font-family: 'Lato', sans-serif;
+}
+
+button {
+    margin: 5px;
+    padding: 8px;
+}
+
+.btn-color {
+    background-image: radial-gradient(circle, #ffce6e, #ffc75c, #ffc049, #ffb934, #ffb119);
 }
 
 .nav {
+    padding: 15px;
+    background: rgb(30, 30, 31);
     display: flex;
     justify-content: flex-end;
     justify-items: center;
