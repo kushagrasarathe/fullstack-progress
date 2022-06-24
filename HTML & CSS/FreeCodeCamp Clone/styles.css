@@ -42,14 +42,20 @@ button {
 }
 
 .placements {
-    background-color: aqua;
+    /* background-color: aqua; */
     margin: 15px;
     padding: 15px;
     display: flex;
     flex-wrap: wrap;
     column-gap: 20px;
     justify-content: center;
+    align-items: center;
 } 
+
+.logo {
+    max-height: 40px;
+    width: 80px;
+}
 
 .companies {
     padding: 20px;
@@ -58,6 +64,15 @@ button {
     display: flex;
     justify-content: center;
 
+}
+
+.main-content-bottom-div {
+    margin: 40px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .alumnis {
