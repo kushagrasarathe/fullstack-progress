@@ -35,8 +35,10 @@ button {
 
 .main-content {
     display: flex;
-    margin: 80px;
+    margin: 80px 150px 40px 150px;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -67,8 +69,8 @@ button {
 }
 
 .main-content-bottom-div {
-    margin: 40px;
-    padding: 30px;
+    /* margin: 20px; */
+    /* padding: 30px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,6 +82,8 @@ button {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
