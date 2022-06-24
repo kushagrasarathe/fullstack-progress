@@ -214,7 +214,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background: rgb(54, 54, 56);
+    background: rgb(64, 64, 79);
     margin-top: 40px;
     /* position: relative; */
     padding: 25px;
@@ -235,5 +235,5 @@ footer > div > a {
 
 footer > div > p {
     padding: 20px;
-    font-weight: 600;
+    font-weight: 500;
 }
