@@ -79,7 +79,13 @@ button {
     background: rgb(63, 69, 90);
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 
+.companies-svg {
+    padding: 20px;
+    max-height: 80px;
 }
 
 .main-content-bottom-div {
@@ -102,6 +108,10 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.alumnis > h1 {
+    font-size: 35px;
 }
 
 .card {
