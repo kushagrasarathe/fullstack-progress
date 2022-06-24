@@ -72,3 +72,8 @@ button {
   .container {
     padding: 2px 16px;
   }
+
+  .card-img {
+      max-width: 350px;
+      height: auto;
+  }
