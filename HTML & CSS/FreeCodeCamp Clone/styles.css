@@ -111,3 +111,23 @@ button {
       max-width: 350px;
       height: auto;
   }
+
+  .course {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .course-box {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background:rgb(207, 207, 207) ;
+      width: 750px;
+      height: 80px;
+      margin: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border: solid 3px black;
+  }
