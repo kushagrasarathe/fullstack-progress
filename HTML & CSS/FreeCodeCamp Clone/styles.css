@@ -91,6 +91,10 @@ button {
     align-items: center;
 }
 
+.main-content-bottom-div > * {
+    margin: 10px;
+}
+
 .alumnis {
     padding: 20px;
     display: flex;
@@ -155,6 +159,30 @@ button {
     color: white;
 }
 
-/* .course-box > span {
-    margin: 0;
-} */
+footer {   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: rgb(54, 54, 56);
+    margin-top: 40px;
+    /* position: relative; */
+    padding: 25px;
+    /* width: max-content; */
+    color: white;
+    text-align: center;
+}
+
+footer > div {
+    padding: 20px;
+}
+
+footer > div > a {
+    font-weight: 500;
+    color: white;
+    padding: 10px;
+}
+
+footer > div > p {
+    padding: 20px;
+    font-weight: 600;
+}
