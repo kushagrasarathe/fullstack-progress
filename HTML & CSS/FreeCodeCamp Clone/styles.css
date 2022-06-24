@@ -57,6 +57,7 @@ button {
 .logo {
     max-height: 40px;
     width: 80px;
+    margin-left: auto;
 }
 
 .companies {
