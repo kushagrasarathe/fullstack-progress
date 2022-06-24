@@ -8,11 +8,18 @@ body {
     color: black;
     background: rgb(250, 250, 250);
     font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 45px;
 }
 
 button {
     margin: 5px;
     padding: 8px;
+    font-weight: bold;
+    /* font-size: 18px; */
 }
 
 .btn-color {
@@ -58,6 +65,12 @@ button {
     max-height: 40px;
     width: 80px;
     margin-left: auto;
+}
+
+.logo-svg {
+    max-height: 40px;
+    width: 80px;
+    /* margin: 0; */
 }
 
 .companies {
@@ -121,14 +134,27 @@ button {
   }
 
   .course-box {
+      margin: 15px;
+      width: 750px;
+      height: 80px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-weight: 500;
+      font-size: 1.3rem;
       display: flex;
       align-items: center;
       justify-content: flex-start;
       background:rgb(207, 207, 207) ;
-      width: 750px;
-      height: 80px;
-      margin: 10px;
-      padding-left: 15px;
-      padding-right: 15px;
       border: solid 3px black;
+      border-radius: 5px;
   }
+
+.course-box:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background: rgb(54, 54, 56);
+    color: white;
+}
+
+/* .course-box > span {
+    margin: 0;
+} */
