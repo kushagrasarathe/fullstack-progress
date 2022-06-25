@@ -205,3 +205,25 @@ main {
     max-width: 1333px;
     height: auto;
 }
+
+.features {
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.features-heading {
+    padding: 20px;
+    font-size: 40px;
+    font-weight: 600;
+    font: bold;
+    width: 600px;
+    text-align: center;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+}
