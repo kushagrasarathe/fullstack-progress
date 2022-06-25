@@ -234,5 +234,20 @@ main {
 .feature-card {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    margin: 28px;
+    padding: 28px;
+    justify-content: center;
+    align-items: center;
+    background: rgb(16, 18, 23);
+    border-radius: 15px;
+}
+
+.feature-card:hover {
+    border: 1px solid #b6a7f3;;
+}
+
+.feature-card > span {
+    padding-top: 20px;
+    font-size: 26px;
+    font-weight: 500;
 }
