@@ -239,7 +239,7 @@ main {
     justify-content: center;
     align-items: center;
     background: rgb(16, 18, 23);
-    border-radius: 15px;
+    border-radius: 25px;
 }
 
 .feature-card:hover {
@@ -251,3 +251,39 @@ main {
     font-size: 26px;
     font-weight: 500;
 }
+
+.frens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fren-imgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.fren-logo {
+    margin: 20px;
+}
+
+.fren-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 290px;
+    height: 111px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.529);
+}
+
+.frens-heading {
+    font-size: 40px;
+    font-weight: 700;
+}
+
