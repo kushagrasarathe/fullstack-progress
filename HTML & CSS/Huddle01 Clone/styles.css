@@ -223,7 +223,16 @@ main {
     text-align: center;
 }
 
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+}
+
 .feature-card {
     display: flex;
     flex-direction: column;
+    padding: 30px;
 }
