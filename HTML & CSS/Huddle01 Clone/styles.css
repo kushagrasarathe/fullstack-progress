@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap");
+@import url('http://fonts.cdnfonts.com/css/clash-display');
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 body {
   background: rgb(23, 26, 35);
   color: rgb(255, 255, 255);
-  font-family: "Lato", sans-serif;
+  font-family: 'Clash Display', sans-serif;
 }
 
 ul {
@@ -116,4 +116,26 @@ nav,
     background: linear-gradient(to right, #A100FF 27%, #0080FF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.main-heading {
+    font-size: 55px;
+    font-weight: 700;
+    font: bold;
+}
+
+.main-para {
+    font-weight: 500;
+    font-size: 20px;
+    width: 650px;
+    text-align: center;
+    padding: 30px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
 }
