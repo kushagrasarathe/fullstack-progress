@@ -95,7 +95,7 @@ nav {
   padding: 10px;
 }
 
-.nav-logo {
+.huddle-logo {
   padding: 10px;
   padding-left: 80px;
 }
@@ -306,6 +306,7 @@ main {
     background: url("./assets/Reach.png") center center / cover;
     border-radius: 20px;
     width: 1500px;
+    height: 280px;
     margin: 30px;
     display: flex;
     justify-content: center;
@@ -320,3 +321,29 @@ main {
     padding: 20px;
 }
 
+.footer-left {
+    margin-right: auto;
+}
+
+.footer-center {
+    margin-right: auto;
+}
+
+footer > div {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+footer > div > a {
+    padding: 15px;
+    font-size: 24px;
+}
+
+footer > div > span {
+    padding: 15px;
+    font-size: 16px;
+    word-spacing: 0.2rem;
+}
