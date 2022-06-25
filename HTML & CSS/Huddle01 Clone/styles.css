@@ -1,4 +1,4 @@
-@import url('http://fonts.cdnfonts.com/css/clash-display');
+@import url("http://fonts.cdnfonts.com/css/clash-display");
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 body {
   background: rgb(23, 26, 35);
   color: rgb(255, 255, 255);
-  font-family: 'Clash Display', sans-serif;
+  font-family: "Clash Display", sans-serif;
 }
 
 ul {
@@ -30,25 +30,26 @@ ul {
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
-  font-family: "RM Neue",sans-serif;
+  font-family: "RM Neue", sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   padding: 10px 21px;
   text-align: center;
   text-transform: none;
-  transition: color .13s ease-in-out,background .13s ease-in-out,opacity .13s ease-in-out,box-shadow .13s ease-in-out;
+  transition: color 0.13s ease-in-out, background 0.13s ease-in-out,
+    opacity 0.13s ease-in-out, box-shadow 0.13s ease-in-out;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
 
 .btn-blue:active {
-  background-color: #006AE8;
+  background-color: #006ae8;
 }
 
 .btn-blue:hover {
-  background-color: #1C84FF;
+  background-color: #1c84ff;
 }
 
 .vr-line {
@@ -77,94 +78,116 @@ nav,
 }
 
 .nav-left > li {
-    padding-right: 60px;
+  padding-right: 60px;
 }
 
-
 .nav-right {
-    padding-right: 80px;
+  padding-right: 80px;
 }
 
 .nav-right > li {
-    padding: 10px;
+  padding: 10px;
 }
 
 .nav-logo {
-    padding: 10px;
-    padding-left: 80px;
+  padding: 10px;
+  padding-left: 80px;
 }
 
 .highlight {
-    background: #A100FF;
-    background: linear-gradient(to right, #A100FF 27%, #0080FF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: #a100ff;
+  background: linear-gradient(to right, #a100ff 27%, #0080ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .main-heading {
-    font-size: 55px;
-    font-weight: 700;
-    font: bold;
+  font-size: 55px;
+  font-weight: 700;
+  font: bold;
 }
 
 .main-para {
-    font-weight: 500;
-    font-size: 20px;
-    width: 650px;
-    text-align: center;
-    padding: 30px;
+  font-weight: 500;
+  font-size: 20px;
+  width: 650px;
+  text-align: center;
+  padding: 30px 0 20px 0;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
 }
 
 .btns {
-    display: flex;
+  display: flex;
 }
 
 .btns > button {
-    padding: 24px 64px;
+  padding: 24px 64px;
 }
 
 .btn-black {
-    align-items: center;
-    background: rgb(23, 26, 35);
-    border: solid 2px gray;
-    border-radius: 8px;
-    box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 0;
-    font-family: "RM Neue",sans-serif;
-    font-size: 100%;
-    line-height: 1.15;
-    margin: 0;
-    padding: 10px 21px;
-    text-align: center;
-    text-transform: none;
-    transition: color .13s ease-in-out,background .13s ease-in-out,opacity .13s ease-in-out,box-shadow .13s ease-in-out;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
+  align-items: center;
+  background: rgb(23, 26, 35);
+  border: solid 2px gray;
+  border-radius: 8px;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: "RM Neue", sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 10px 21px;
+  text-align: center;
+  text-transform: none;
+  transition: color 0.13s ease-in-out, background 0.13s ease-in-out,
+    opacity 0.13s ease-in-out, box-shadow 0.13s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
-  .btn-margin {
-    margin: 10px;
-  }
-  
-  .btn-black:active {
-    background: rgb(41, 45, 57);
-  }
-  
-  .btn-black:hover {
-    background: rgb(37, 41, 53);
-  }
+.btn-margin {
+  margin: 10px;
+}
 
+.btn-black:active {
+  background: rgb(41, 45, 57);
+}
+
+.btn-black:hover {
+  background: rgb(37, 41, 53);
+}
+
+.purple {
+  color: #cabdff;
+  font-size: 14px;
+}
+
+.green {
+  color: #b1e5fc;
+  font-size: 14px;
+}
+
+.pink {
+  color: #ffbdcd;
+  font-size: 14px;
+}
+
+.app-links {
+    margin: 30px;
+}
+
+.app-links > span {
+    padding: 10px;
+}
