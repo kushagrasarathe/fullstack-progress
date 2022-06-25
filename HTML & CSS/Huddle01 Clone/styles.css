@@ -287,3 +287,36 @@ main {
     font-weight: 700;
 }
 
+.try-huddle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.try-heading {
+    font-size: 40px;
+    font-weight: 700;
+    padding: 20px;
+    margin: 20px;
+}
+
+.reach-out {
+    padding: 20px;
+    background: url("./assets/Reach.png") center center / cover;
+    border-radius: 20px;
+    width: 1500px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reach-out > span {
+    font-size: 32px;
+    width: 600px;
+    text-align: center;
+    padding: 20px;
+}
+
