@@ -17,19 +17,17 @@ ul {
   /* padding: 8px; */
 }
 
-ul > li {
-  padding: 10px;
-  /* margin-right: auto; */
-}
-
 .btn-blue {
   background: #246bfd;
+  color: white;
   padding: 8px;
 }
 
 .vr-line {
-  border-left: 1px solid rgb(171, 171, 171);
-  height: 48px;
+  border-left: 1px solid rgb(115, 115, 115);
+  height: 35px;
+  margin-left: 20px;
+  margin-right: 0;
 }
 
 /* nav, .nav-list  {
@@ -43,19 +41,35 @@ ul > li {
 nav,
 .nav-list {
   background-color: rgba(0, 0, 0, 0.6);
-  color: rgb(171, 171, 171);
+  color: #a7aeb9;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
   justify-content: start;
 }
 
 .nav-left {
   margin-right: auto;
+  padding: 10px;
+  padding-left: 30px;
+}
+
+.nav-left > li {
+    padding-right: 60px;
+}
+
+
+.nav-right {
+    padding-right: 80px;
+}
+
+.nav-right > li {
+    padding: 10px;
 }
 
 .nav-logo {
-  padding: 10px;
+    padding: 10px;
+    padding-left: 80px;
 }
