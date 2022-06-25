@@ -110,3 +110,10 @@ nav,
     padding: 10px;
     padding-left: 80px;
 }
+
+.highlight {
+    background: #A100FF;
+    background: linear-gradient(to right, #A100FF 27%, #0080FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
