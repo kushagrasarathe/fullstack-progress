@@ -17,7 +17,6 @@ ul {
   /* padding: 8px; */
 }
 
-/* CSS */
 .btn-blue {
   align-items: center;
   appearance: button;
@@ -52,28 +51,12 @@ ul {
   background-color: #1C84FF;
 }
 
-
-/* .btn-blue {
-
-  background: #246bfd;
-  color: white;
-  padding: 8px;
-} */
-
 .vr-line {
   border-left: 1px solid rgb(115, 115, 115);
   height: 35px;
   margin-left: 20px;
   margin-right: 0;
 }
-
-/* nav, .nav-list  {
-    background-color: rgba(0, 0, 0, 0.6); 
-    color: rgba(214, 206, 138, 0.6);
-    padding: 15px;
-    display: flex;
-    flex-wrap: wrap;
-} */
 
 nav,
 .nav-list {
@@ -139,3 +122,49 @@ main {
     align-items: center;
     margin-top: 60px;
 }
+
+.btns {
+    display: flex;
+}
+
+.btns > button {
+    padding: 24px 64px;
+}
+
+.btn-black {
+    align-items: center;
+    background: rgb(23, 26, 35);
+    border: solid 2px gray;
+    border-radius: 8px;
+    box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    font-family: "RM Neue",sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    padding: 10px 21px;
+    text-align: center;
+    text-transform: none;
+    transition: color .13s ease-in-out,background .13s ease-in-out,opacity .13s ease-in-out,box-shadow .13s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .btn-margin {
+    margin: 10px;
+  }
+  
+  .btn-black:active {
+    background: rgb(41, 45, 57);
+  }
+  
+  .btn-black:hover {
+    background: rgb(37, 41, 53);
+  }
+
