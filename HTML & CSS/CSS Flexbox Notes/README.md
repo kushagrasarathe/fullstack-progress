@@ -98,4 +98,24 @@ two {
     flex-basis: 200px;
 }
 
+``` 
+
+Difference b/w `min-width` and `flex-basis`:
+`min-width` adds a horizontal scroll bar if the minimum width defined for an element is more than the screen width whereas `flex-basis` shrinks the elements to screen width instead of adding a horizontal scroll.
+
+For all of the above flexbox properties we can use css shorthnad like:
+
+```css
+.flex-container {
+    /* flex: flex-grow-val-here flex-shrink-val-here flex-basis-val-here */
+    flex: 1 0 200px;
+
+    /* or */
+    flex : 1; /* this defines that the flex-grow is one, flex-shrink is 1 and flex-basis is zero */
+}
 ```
+
+<hr/>
+
+
+

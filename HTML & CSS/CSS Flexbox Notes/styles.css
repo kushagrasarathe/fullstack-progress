@@ -60,25 +60,26 @@ body {
 
 .box-b {
     height: 100px;
-    /* min-width: 200px; */
+    flex-basis: 800px;
     /* flex-basis: 100px; */
     /* flex-grow: 1; */
 }
 
 .one-b {
     background: aqua;
-    flex-basis: 100px;
+    /* flex-basis: 100px; */
 
 }
 
 .two-b {
     background: whitesmoke;
-    flex-basis: 200px;
+    /* flex-basis: 200px; */
 
 }
 
 .three-b {
     background: salmon;
-    flex-basis: 300px;
+    /* flex-basis: 300px; */
 
 }
+
