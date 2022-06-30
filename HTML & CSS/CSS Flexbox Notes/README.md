@@ -73,4 +73,29 @@ This would wrap the item to next line.
 ```
     wrap : this wraps the flex item in new line
     wrap-reverse : this does same thing as wrap but in reverse manner
+    no-wrap : this is the default behaviour
+```
+
+<hr/>
+
+## Flex Basis
+
+`flex-basis` defines starting width/height of each element
+
+```css
+.box {
+    height: 100px;
+    flex-basis: 100px;
+}
+
+/* or */
+
+one {
+    flex-basis: 100px;
+}
+
+two {
+    flex-basis: 200px;
+}
+
 ```

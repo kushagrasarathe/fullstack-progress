@@ -6,41 +6,79 @@ body {
     background: wheat;
 }
 
-.wrapper {
+.wrapper1 {
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
 }
 
-.flex-container {
+.flex-container1 {
     display: flex;
     background: rgb(35, 36, 36);
     flex-wrap: wrap;
 }
 
-.box {
+.box-a {
     height: 100px;
     /* use with shrink */
     /* width: 200px; */  
     /* use with grow or wrap */
-    min-width: 200px; 
+    min-width: 300px; 
     flex-grow: 1;
 }
 
-.one {
+.one-a {
     background: aqua;
     /* flex-grow: 1; */
     /* flex-shrink: 1; */
 }
 
-.two {
+.two-a {
     background: whitesmoke;
     /* flex-grow: 1; */
     /* flex-shrink: 2; */
 }
 
-.three {
+.three-a {
     background: salmon;
     /* flex-grow: 1; */
     /* flex-shrink: 3; */
+}
+
+
+.wrapper2 {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.flex-container2 {
+    display: flex;
+    background: rgb(35, 36, 36);
+    flex-wrap: wrap;
+}
+
+.box-b {
+    height: 100px;
+    /* min-width: 200px; */
+    /* flex-basis: 100px; */
+    /* flex-grow: 1; */
+}
+
+.one-b {
+    background: aqua;
+    flex-basis: 100px;
+
+}
+
+.two-b {
+    background: whitesmoke;
+    flex-basis: 200px;
+
+}
+
+.three-b {
+    background: salmon;
+    flex-basis: 300px;
+
 }
