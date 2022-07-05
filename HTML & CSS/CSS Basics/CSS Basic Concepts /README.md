@@ -24,7 +24,7 @@ Example of some inline elements:
 -   span tag
 ```
 
-<br/>
+<hr/>
 
 ## CSS Box Model
 
@@ -42,7 +42,7 @@ Properties used to define box model:
 
 **NOTE: Inline elements ignore width and height properties**
 
-<br/>
+<hr/>
 
 ## Display Property
 
@@ -65,7 +65,7 @@ html {
 }
 ```
 
-<br/>
+<hr/>
 
 ## Box-sizing Property
 
@@ -96,7 +96,7 @@ Reference:
 - https://css-tricks.com/international-box-sizing-awareness-day/
 - https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 
-<br/>
+<hr/>
 
 ## Float Property
 
@@ -140,7 +140,7 @@ To fix the problem of elements around floating element flowing around it we use 
 Reference:
 - https://www.w3schools.com/howto/howto_css_clearfix.asp
 
-<br/>
+<hr/>
 
 ## Overflow Property
 
@@ -157,7 +157,7 @@ Overflow property values:
 
 - https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
 
-<br/>
+<hr/>
 
 ## Position Property
 
