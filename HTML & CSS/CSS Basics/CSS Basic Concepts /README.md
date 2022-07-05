@@ -24,6 +24,8 @@ Example of some inline elements:
 -   span tag
 ```
 
+<br/>
+
 ## CSS Box Model
 
 Every element is viewed by the browser as a rectangular box. The CSS box model describes how these boxes are generated for each HTML element.
@@ -39,6 +41,8 @@ Properties used to define box model:
 ```
 
 **NOTE: Inline elements ignore width and height properties**
+
+<br/>
 
 ## Display Property
 
@@ -61,16 +65,16 @@ html {
 }
 ```
 
+<br/>
+
 ## Box-sizing Property
 
 The intial `box-sizing` value is `content-box`, which means when padding and border styles are added, it increase the size of elements. The `border-box` value will push the content inward to include the padding and border-space to maintain the `height` and `width` property defined in css.
 
-\*\*
-NOTE:
+**NOTE:**
 
-- Margin is applied outside the element so it doesn't increase the size of the element
-- Setting the left and right margin to auto would center the block level elements.
-  \*\*
+**- Margin is applied outside the element so it doesn't increase the size of the element**
+**- Setting the left and right margin to auto would center the block level elements.**
 
 ## The Box Model Fix
 
@@ -91,6 +95,8 @@ Reference:
 - https://www.paulirish.com/2012/box-sizing-border-box-ftw/
 - https://css-tricks.com/international-box-sizing-awareness-day/
 - https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+
+<br/>
 
 ## Float Property
 
@@ -134,6 +140,8 @@ To fix the problem of elements around floating element flowing around it we use 
 Reference:
 - https://www.w3schools.com/howto/howto_css_clearfix.asp
 
+<br/>
+
 ## Overflow Property
 
 The overflow property is used to determine how to display the overflow of content, like adding scroll bar when the content is too big.
@@ -148,3 +156,28 @@ Overflow property values:
 ```
 
 - https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
+
+<br/>
+
+## Position Property
+
+The position property is used to arrange elements relative to its current position, it's containing element or the browser viewport.
+
+Position property values
+
+```
+- relative: placed acc to normal flow, then can be adjusted using top, left, bottom and right values
+- absolute: element is removed from normal flow and then adjusted using top, left, bottom and right values
+- static: placed acc to normal flow, top, left, bottom, right & z-index values have no effect on element
+- sticky: the element is treated as relative until scroll location reaches specified value, then it takes position of fixed.
+- fixed: element stays on sme position even if the page is scrolled
+```
+
+**NOTE: With position set to fixed or absolute if the block element doesn't have a width specified, then it will automatically adjust to the size of content the element **
+
+Reference:
+- https://developer.mozilla.org/en-US/docs/Web/CSS/position
+- https://www.w3schools.com/css/css_positioning.asp
+
+
+
