@@ -128,7 +128,7 @@ To use the clear property we use one of the following property:
 To fix the problem of elements around floating element flowing around it we use `clearfix` hack.
 
 ```css
- .clearfix::after {
+.clearfix::after {
   content: "";
   clear: both;
   display: table;
@@ -138,6 +138,7 @@ To fix the problem of elements around floating element flowing around it we use 
 **NOTE: This class is applied to the parent of the floated element.**
 
 Reference:
+
 - https://www.w3schools.com/howto/howto_css_clearfix.asp
 
 <hr/>
@@ -176,8 +177,6 @@ Position property values
 **NOTE: With position set to fixed or absolute if the block element doesn't have a width specified, then it will automatically adjust to the size of content the element **
 
 Reference:
+
 - https://developer.mozilla.org/en-US/docs/Web/CSS/position
 - https://www.w3schools.com/css/css_positioning.asp
-
-
-
