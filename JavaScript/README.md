@@ -4,11 +4,11 @@
 
 We can use this to write antything in our browser console. This is very usefull when debugging the code.
 
-```javascript
+```javascript=
 console.log('Kushagra Sarathe')
 console.log('Lets learn JavaScript')
 console.log('Hey this is logged into browser console :D')
-```
+``` 
 
 ### Variables in JavaScript
 
@@ -20,11 +20,12 @@ Before assigning any value to variables, there are a certain rules to follow whi
 
 1. variable name should start with letter (can be both uppercase and lowercase), underscore or dollar
 2. name cannot start with a number but after first letter or sign number cab ve used
-3. variables are case sensitive and thus `kushagra` & `Kushagra` are both two different variables.
+3. variable names are case sensitive and thus `kushagra` & `Kushagra` are both two different variables.
+
 
 **Variable Declaration**
 
-```javascript
+```javascript=
 let name = 'Kushagra Sarathe';
 console.log(name);
 
@@ -42,10 +43,9 @@ console.log(bool);
 ```
 
 #### Datatypes in JavaScript
-
 - String : used to store string type data
 - Number : used to store float and integer values
 - Boolean : used to store `true` or `false` values
-- BigInt : used to store `true` or `false` values
+- BigInt : useful when dealing with operations on very large numbers
 - Null : it is just null value which means no value is there
 - Undefined : this is assigned to variables declared without any initial value
