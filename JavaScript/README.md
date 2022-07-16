@@ -4,7 +4,7 @@
 
 We can use this to write antything in our browser console. This is very usefull when debugging the code.
 
-```javascript=
+```javascript
 console.log('Kushagra Sarathe')
 console.log('Lets learn JavaScript')
 console.log('Hey this is logged into browser console :D')
@@ -24,7 +24,7 @@ Before assigning any value to variables, there are a certain rules to follow whi
 
 **Variable Declaration**
 
-```javascript=
+```javascript
 let name = 'Kushagra Sarathe';
 console.log(name);
 
