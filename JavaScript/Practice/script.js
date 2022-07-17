@@ -25,3 +25,20 @@ if (whether == "rain") {
 } else {
   console.log("Go for vacation");
 }
+
+// tip calculator using function
+
+/**
+ *  @function calculate tip
+ *  @param {number} foodAmt cost of food
+ *  @param {number} tipPercent tip percentage
+ *  @return {number} total bill to be paid including tip based on the percentage
+ */
+
+function calcTip(foodAmt, tipPercent) {
+  let tipAmt = (foodAmt * tipPercent) / 100;
+  let totaBill = foodAmt + tipAmt;
+  return `Tip percentage is $${tipAmt} and your total bill is $${totaBill}.`;
+}
+
+console.log(calcTip(500, 10));
