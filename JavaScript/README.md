@@ -10,7 +10,9 @@ console.log("Lets learn JavaScript");
 console.log("Hey this is logged into browser console :D");
 ```
 
-### Variables in JavaScript
+<br>
+
+## Variables in JavaScript
 
 Variables are used to store data. In much simple words think of variables as your school bag and the things you keep inside your bag as data. We usually keep our books, pencil-box, lunch and other stuff in our school bag, similarly we can store different type of data inside vaiables. This data can be anything like strings, numeric values, etc. and are therefore called [datatypes](#Datatypes-in-JavaScript).
 
@@ -21,6 +23,12 @@ Before assigning any value to variables, there are a certain rules to follow whi
 1. variable name should start with letter (can be both uppercase and lowercase), underscore or dollar
 2. name cannot start with a number but after first letter or sign number cab ve used
 3. variable names are case sensitive and thus `kushagra` & `Kushagra` are both two different variables.
+
+**There are 3 types of variables**
+
+1. var : value can be changed, not recommended bez its outdated
+2. let : value can be changed
+3. cont : value cannot be changed
 
 **Variable Declaration**
 
@@ -41,6 +49,8 @@ let bool = "";
 console.log(bool);
 ```
 
+<br>
+
 #### Datatypes in JavaScript
 
 - String : used to store string type data
@@ -51,6 +61,8 @@ console.log(bool);
 - Undefined : this is assigned to variables declared without any initial value
 - Arrays [] : arrays store multiple values inside single variable
 - Objects {} : everything in js is an object
+
+<br>
 
 ## Operators
 
@@ -77,6 +89,8 @@ Example:
 let sum = 2 + 5;
 ```
 
+<br>
+
 ## Math properties and methods
 
 **Math.PI** Returns value of `pi`
@@ -91,3 +105,11 @@ let sum = 2 + 5;
 Rounds number **down** to nearest integer
 
 **Math.ceil()** Rounds number **up** to nearest integer
+
+**Math.random()** Returns a random number between 0(inclusive) and 1(exclusive)
+
+<br>
+
+## Conditionals
+
+Conditions are used to compare values, variables or datatypes. Conditions always return a boolean value.
