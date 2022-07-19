@@ -4,7 +4,7 @@ let guest = document.querySelector("#guest_score");
 let home_section = document.querySelector("#home");
 let guest_section = document.querySelector("#guest");
 
-let result = document.querySelector('#result');
+let result = document.querySelector("#result");
 
 let home_score = 0;
 let guest_score = 0;
@@ -48,34 +48,31 @@ function newGame() {
   home.textContent = home_score;
   guest_score = 0;
   guest.textContent = guest_score;
-  home_section.classList.remove("winner")
+  home_section.classList.remove("winner");
   guest_section.classList.remove("winner");
   guest_section.classList.remove("draw");
-  result.textContent = ""
+  result.textContent = "";
 }
 
 // end game
 
-
 function endGame() {
-
-    if (home_score > guest_score && guest_score != home_score) {
-        home_section.classList.add("winner");
-        guest_section.classList.remove("winner");
-  result.textContent = "Home Team Wins"
-
-    } else if ( guest_score > home_score && home_score != guest_score ) {
-        guest_section.classList.add("winner");
-        home_section.classList.remove("winner") ;
-  result.textContent = "Guest Team Wins"
-
-    } else {
-        guest_section.classList.add("draw");
-        home_section.classList.add("draw") ;
-  result.textContent = "Match Draw"
-
-    }
-
+  if (home_score > guest_score && guest_score != home_score) {
+    home_section.classList.add("winner");
+    guest_section.classList.remove("winner");
+    result.textContent = "Home Team Wins";
+   
+  } else if (guest_score > home_score && home_score != guest_score) {
+    guest_section.classList.add("winner");
+    home_section.classList.remove("winner");
+    result.textContent = "Guest Team Wins";
+   
+  } else {
+    guest_section.classList.add("draw");
+    home_section.classList.add("draw");
+    result.textContent = "Match Draw";
+   
+  }
 }
 
 //  leader
