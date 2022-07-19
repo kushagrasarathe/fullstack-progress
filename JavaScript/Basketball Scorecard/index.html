@@ -1,34 +1,39 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basketball Scorecard</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1 class="title">Basketball Scorecard </h1>
-    <hr>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="title">Basketball Scorecard</h1>
+    <hr />
     <main>
-        <div class="home">
-            <h1>HOME</h1>
-            <div class="score">
-                <span>0</span>
-            </div>
-            <button>+1</button>
-            <button>+2</button>
-            <button>+3</button>
+      <div id="home">
+        <h1>HOME</h1>
+        <div class="score">
+          <span id="home_score">0</span>
         </div>
-        <div class="guest">
-            <h1>GUEST</h1>
-            <div class="score">
-                <span>0</span>
-            </div>
-            <button>+1</button>
-            <button>+2</button>
-            <button>+3</button>
+        <button class="score-btn" onclick="onePointerHome()">+1</button>
+        <button class="score-btn" onclick="twoPointerHome()">+2</button>
+        <button class="score-btn" onclick="threePointerHome()">+3</button>
+      </div>
+      <div id="guest">
+        <h1>GUEST</h1>
+        <div class="score">
+          <span id="guest_score">0</span>
         </div>
+        <button class="score-btn" onclick="onePointerGuest()">+1</button>
+        <button class="score-btn" onclick="twoPointerGuest()">+2</button>
+        <button class="score-btn" onclick="threePointerGuest()">+3</button>
+      </div>
     </main>
-</body>
-<script src="./app.js"></script>
+    <div>
+        <p id="result"></p>
+    </div>
+    <button class="game-btn" onclick="newGame()" >New Game</button>
+    <button class="game-btn" onclick="endGame()" >End Game</button>
+  </body>
+  <script src="./app.js"></script>
 </html>

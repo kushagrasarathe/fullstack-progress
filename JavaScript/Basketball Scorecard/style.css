@@ -1,69 +1,115 @@
-@import url('http://fonts.cdnfonts.com/css/cursed-timer-ulil');
+@import url("http://fonts.cdnfonts.com/css/cursed-timer-ulil");
 
 body {
-    color: white;
-    background-color: #1B244A;
-    text-align: center;
-    font-family: 'Cursed Timer ULiL', sans-serif;
-    padding: 0 2.5rem;
+  color: white;
+  background-color: #1b244a;
+  text-align: center;
+  font-family: "Cursed Timer ULiL", sans-serif;
+  padding: 0 2.5rem;
 }
 
 .title {
-    margin: 50px auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 50px auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-button {
+.score-btn {
+  margin: 30px 10px;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 2px solid #9aabd8;
+  border-radius: 5px;
+  color: #9aabd8;
+  font-family: "Cursed Timer ULiL", sans-serif;
+  font-size: 20px;
+}
+
+.score-btn:active {
+  background-color: rgb(16, 52, 92);
+}
+
+.game-btn {
     margin: 30px 10px;
-    width: 60px;
-    height: 60px;
+    padding: 10px;
     background-color: transparent;
-    border: 2px solid #9AABD8;
+    border: 2px solid #9aabd8;
     border-radius: 5px;
-    color: #9AABD8;
-    font-family: 'Cursed Timer ULiL', sans-serif;
+    color: #9aabd8;
+    font-family: "Cursed Timer ULiL", sans-serif;
     font-size: 20px;
 }
 
-button:active {
+.game-btn:active {
     background-color: rgb(16, 52, 92);
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-    font-size: 40px;
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#home,
+#guest {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  /* padding: 20px; */
+  border: 2px solid #8b9ac5;
+  margin: 40px;
+}
+
+.winner {
+  background: green;
+}
+
+.draw {
+    background: rgb(60, 104, 146);
+}
+
+#result {
+    font-weight: 600;
+    font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.home, .guest {
-    width: 500px;
-    height: auto;
-    border-radius: 20px;
-    /* padding: 20px; */
-    border: 2px solid #9AABD8;
-    margin: 40px;
-}
-
-
-
 .score {
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    background: rgb(7, 10, 13);
-    border-radius: 15px;
-    font-size: 60px;
-    color: rgb(252, 86, 86);
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background: rgb(7, 10, 13);
+  border-radius: 15px;
+  font-size: 60px;
+  color: rgb(252, 86, 86);
 }
 
 .score span {
-    margin: 0 auto ;
+  margin: 0 auto;
+}
+
+.leader {
+    border: 2px solid rgb(96, 220, 212);
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    margin: 0 auto;
+    max-width: 300px;
+    flex-direction: column;
+  }
+
+  .home,
+  .guest {
+    width: 300px;
+    height: auto;
+  }
 }
