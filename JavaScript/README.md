@@ -155,4 +155,11 @@ console.log(calcTip(500, 10));
 
 <br/>
 
-## Arrays
+## Document Object Model (DOM)
+
+DOM allows accessing HTML elements using JavaScript and manipulate them.
+
+**DOM Manipulation**
+
+Adding elements to page:
+
