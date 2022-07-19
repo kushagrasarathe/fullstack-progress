@@ -8,10 +8,6 @@ body {
 
 }
 
-body * {
-    /* border: 2px solid red; */
-}
-
 main {
     margin: 20px;
     display: flex;
