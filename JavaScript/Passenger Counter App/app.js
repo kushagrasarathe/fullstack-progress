@@ -1,14 +1,25 @@
 
 // declaring variable for passenger counts
+let passengers = document.getElementById("count") ;
 let count = 0 ;
 
-let passengers = document.getElementById("count") ;
+let save_count = document.querySelector("#save");
+
 let addBtn = document.getElementById('increment_btn')
 
 function increase() {
     count += 1;
     passengers.innerHTML = count;
-    console.log(count) ;
+    // console.log(count) ;
 }
+
+function save() {
+    let result = count + ' - ';
+    // save_count.innerText += result; // innertext trims the space from result variable
+    save_count.textContent += result;
+    console.log(count);
+}
+
+
 
 addBtn.addEventListener("click", increase)

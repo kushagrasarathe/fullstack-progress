@@ -33,10 +33,14 @@ button {
     background: rgb(46, 43, 40);
 }
 
-#increment_btn:hover {
-    background: rgb(51, 61, 60);
+#increment_btn:hover, #save-btn:hover {
     box-shadow: 0px 0px 5px 5px  rgb(164, 250, 252);
 }
+
+#save-btn {
+    background: rgb(46, 43, 40);
+}
+
 
 #save-btn {
     background: darkgreen;
