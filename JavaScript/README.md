@@ -5,10 +5,10 @@
 We can use this to write antything in our browser console. This is very usefull when debugging the code.
 
 ```javascript
-console.log('Kushagra Sarathe')
-console.log('Lets learn JavaScript')
-console.log('Hey this is logged into browser console :D')
-``` 
+console.log("Kushagra Sarathe");
+console.log("Lets learn JavaScript");
+console.log("Hey this is logged into browser console :D");
+```
 
 <br>
 
@@ -25,34 +25,34 @@ Before assigning any value to variables, there are a certain rules to follow whi
 3. variable names are case sensitive and thus `kushagra` & `Kushagra` are both two different variables.
 
 **There are 3 types of variables**
+
 1. var : value can be changed, not recommended bez its outdated
 2. let : value can be changed
 3. cont : value cannot be changed
 
-
 **Variable Declaration**
 
 ```javascript
-let name = 'Kushagra Sarathe';
+let name = "Kushagra Sarathe";
 console.log(name);
 
 let Num = 101;
 console.log(num);
 
-let _topicName = 'JavaScript 101';
+let _topicName = "JavaScript 101";
 console.log(_topicName);
 
 let $number1 = 0.25;
 console.log($number1);
 
-let bool = '';
+let bool = "";
 console.log(bool);
 ```
 
 <br>
 
-
 #### Datatypes in JavaScript
+
 - String : used to store string type data
 - Number : used to store float and integer values
 - Boolean : used to store `true` or `false` values
@@ -64,7 +64,6 @@ console.log(bool);
 
 <br>
 
- 
 ## Operators
 
 Operators are used to perform operations, assign values & compare them.
@@ -80,17 +79,17 @@ Example of Some operators are:
 =     : assignment
 ==    : comparison
 ===   : strict comparison
-!     : logical NOT 
+!     : logical NOT
 etc...
 ```
 
 Example:
+
 ```javascript
-let sum = 2 + 5 
+let sum = 2 + 5;
 ```
 
 <br>
-
 
 ## Math properties and methods
 
@@ -102,7 +101,7 @@ let sum = 2 + 5
 
 **Math.round()** Rounds number to nearest integer. If for example number is `4.5` or `4.89`, result would be `5`, but if number is `4.499`, result would be `4`.
 
-**Math.floor()** 
+**Math.floor()**
 Rounds number **down** to nearest integer
 
 **Math.ceil()** Rounds number **up** to nearest integer
@@ -111,7 +110,6 @@ Rounds number **down** to nearest integer
 
 <br>
 
-
 ## Conditionals
 
 Conditions are used to compare values, variables or datatypes. Conditions always return a boolean value.
@@ -119,12 +117,12 @@ Conditions are used to compare values, variables or datatypes. Conditions always
 Example:
 
 ```javascript
-let food = 'pizza';
+let food = "pizza";
 
-if (food == 'pizza') {
-  console.log('Eat pizza')
+if (food == "pizza") {
+  console.log("Eat pizza");
 } else {
-  console.log('pizza not found')
+  console.log("pizza not found");
 }
 ```
 
@@ -136,7 +134,7 @@ Function is a block of code that performs some task when/if something calls it.
 
 Example:
 
-```javascript 
+```javascript
 /**
  *  @function calculate tip
  *  @param {number} foodAmt cost of food
@@ -163,3 +161,67 @@ DOM allows accessing HTML elements using JavaScript and manipulate them.
 
 Adding elements to page:
 
+```javascript
+const body = document.body;
+```
+
+```javascript
+body.append("Hello Kushagra!!!  ", "Lets Learn JavaScript!!!");
+
+// appendChild method doesn't let us append string to page, to append strings use append() method
+// appendChild can only append one element at a time
+body.appendChild("Hello"); // this gives error
+```
+
+Creating elements in page:
+
+```javascript
+const newEl1 = document.createElement("div");
+const newEl2 = document.createElement("div");
+// adding text to new div using .innerText
+newEl1.innerText = "This text is added using .innerText";
+// appending new div to page
+body.append(newEl1);
+// adding text to new div using .textContent
+newEl2.textContent = "This text is added using .textContent";
+// appending new div to page
+body.append(newEl2);
+```
+
+Modifying HTML:
+
+```javascript
+const strong = document.createElement("span");
+// strong.innerText = "<strong>Kushagra</strong>";
+strong.innerHTML = "<strong>Kushagra</strong>";
+body.append(strong);
+
+// removing html elements
+const msg = document.querySelector("#message");
+msg.remove(); // this completely removes the element from page
+```
+
+Modifying element properties:
+
+```javascript
+// console.log(strong.setAttribute('id', 'stronEl'));
+console.log((strong.title = "stronEl")); //set
+console.log(msg.getAttribute("id")); //get
+msg.removeAttribute("id"); //remove
+```
+
+Modifying element classes:
+
+```javascript
+msg.classList.add("bg");
+msg.classList.remove("bg");
+msg.classList.toggle("bg", false);
+msg.classList.toggle("bg");
+```
+
+Modifying element styles:
+
+```javascript
+msg.style.color = "white";
+msg.style.background = "red";
+```
