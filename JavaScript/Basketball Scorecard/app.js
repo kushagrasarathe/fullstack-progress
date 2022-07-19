@@ -51,6 +51,7 @@ function newGame() {
   home_section.classList.remove("winner");
   guest_section.classList.remove("winner");
   guest_section.classList.remove("draw");
+  home_section.classList.remove("draw");
   result.textContent = "";
 }
 
@@ -61,16 +62,20 @@ function endGame() {
     home_section.classList.add("winner");
     guest_section.classList.remove("winner");
     result.textContent = "Home Team Wins";
-   
+    setTimeout(newGame, 3000)
   } else if (guest_score > home_score && home_score != guest_score) {
     guest_section.classList.add("winner");
     home_section.classList.remove("winner");
     result.textContent = "Guest Team Wins";
+    setTimeout(newGame, 3000)
+
    
   } else {
     guest_section.classList.add("draw");
     home_section.classList.add("draw");
     result.textContent = "Match Draw";
+    setTimeout(newGame, 3000)
+
    
   }
 }
