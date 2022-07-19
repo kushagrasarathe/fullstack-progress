@@ -84,6 +84,7 @@ body.append("Hello Kushagra!!!  ", "Lets Learn JavaScript!!!");
 // appendChild can only append one element at a time
 // body.appendChild("Hello"); // this gives error
 
+
 // creating elements in page
 const newEl1 = document.createElement('div');
 const newEl2 = document.createElement('div');
@@ -96,8 +97,33 @@ newEl2.textContent = "This text is added using .textContent";
 // appending new div to page
 body.append(newEl2);
 
+
 // modifying html using dom manipulation
 const strong = document.createElement('span');
 // strong.innerText = "<strong>Kushagra</strong>";
 strong.innerHTML = "<strong>Kushagra</strong>";
 body.append(strong);
+
+
+// removing html elements
+const msg = document.querySelector("#message");
+//msg.remove(); // this completely removes the element from page
+
+
+// modifying element properties
+// console.log(strong.setAttribute('id', 'stronEl'));
+console.log(strong.title = "stronEl"); //set
+console.log(msg.getAttribute('id')); //get
+msg.removeAttribute('id'); //remove
+
+
+// modifying element classes
+msg.classList.add('bg');
+msg.classList.remove('bg');
+msg.classList.toggle('bg', false);
+msg.classList.toggle('bg');
+
+
+// modifying element style
+msg.style.color = 'white';
+msg.style.background = 'red';
