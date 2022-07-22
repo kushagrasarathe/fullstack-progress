@@ -225,3 +225,41 @@ Modifying element styles:
 msg.style.color = "white";
 msg.style.background = "red";
 ```
+
+## Arrays
+
+Arrays are used to store multiple values, it can be of any type, e.g., boolean, string or number.
+
+**Array index**
+Index in arrays starts with 0, i.e.,
+
+`let arr = ['a', 'b', 'c']`
+The index of `a` element would be `0` and that of `c` element would be `2`.
+
+**Array length**
+The lenght of array is the number of elements it has. We can find array length using:
+
+```javascript
+let arr = ["a", "b", "c"];
+console.log(arr.length); // returns 3
+```
+
+**Add elements in array**
+To add elements to array we use `.push()` method.
+
+Example:
+
+```javascript
+arr.push('d');
+console.log(arr.length); // returns 4
+```
+
+**Remove last item in array**
+To remove last element from an array we use `.pop()` method.
+
+Example:
+
+```javascript
+arr.pop();
+console.log( arr.length ); // returns 3
+```
