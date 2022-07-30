@@ -1,0 +1,21 @@
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+button {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+}
+
+#onn {
+    max-width: 500px;
+}
+
+#onn, #off {
+    display: none;
+}
