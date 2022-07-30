@@ -263,3 +263,6 @@ Example:
 arr.pop();
 console.log( arr.length ); // returns 3
 ```
+
+## Loops
+
