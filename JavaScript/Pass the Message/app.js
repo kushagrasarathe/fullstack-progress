@@ -7,7 +7,7 @@ function submit() {
     if ( msg.value ) {
         delivered_msg.textContent = "Message Delivered";
     } else {
-        delivered_msg.textContent = "Empty message, please enter desired mesasage above";
+        delivered_msg.textContent = "Empty message, please enter mesasage above";
     }
     success.textContent = msg.value;
 }

@@ -1,5 +1,7 @@
 html {
-    background-color: rgb(110, 197, 255);
+    min-height: 100%;
+    background: rgb(36,244,255);
+    background: linear-gradient(329deg, rgba(36,244,255,1) 0%, rgba(75,115,255,1) 35%, rgba(35,221,255,1) 70%, rgba(75,115,255,1) 100%); 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
