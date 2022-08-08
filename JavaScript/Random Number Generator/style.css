@@ -1,0 +1,19 @@
+body {
+    background-color: #b5e9f3;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.button {
+    background: #b5f3d2;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
