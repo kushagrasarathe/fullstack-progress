@@ -11,10 +11,18 @@ body {
     flex-wrap: wrap;
 }
 
-.input {
+input {
     background: #dff2fa;
     width: 20%;
     padding: 8px 12px;
     border-radius: 5px;
+    border: 2px solid black;
+}
+
+.add_btn {
+    background-color: aqua;
+    border-radius: 5px;
+    margin: 25px auto;
+    padding: 8px  12px;
     border: 2px solid black;
 }
