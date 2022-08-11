@@ -1,29 +1,38 @@
-const input =  document.querySelector('.input');
-const add_btn = document.querySelector('.add_btn')
-const item = document.querySelector('.add')
+const item = document.querySelector(".add_item");
+const add_btn = document.querySelector("#add_btn");
+const display_btn = document.querySelector("#display_btn");
+const search_input = document.querySelector(".user_input");
 const list = document.querySelector(".list");
 let data = [];
+let newarr = [];
 
 const addToList = () => {
-    let newItem = item.value;
-    data.push(newItem);
+  let newItem = item.value;
+  data.push(newItem);
+  console.log(data);
+};
 
-      
-    data.forEach((item)=>{
-        let create_item = document.createElement("h1");
-        create_item.innerText = item;
-      list.appendChild(create_item);
-    })  
-
-    // create_item.appendChild(document.createTextNode(newItem));
-    // list.appendChild(create_item);
-    // console.log(data)
-    // console.log(newItem);
-}
+const displayData = () => {
+  data.forEach((item) => {
+    let li = document.createElement("li");
+    li.textContent = item;
+    list.appendChild(li);
+  });
+};
 
 const search = () => {
-    console.log('test');
-}
+  const userInputValue = search_input.value;
+  const menu_list = document.getElementsByTagName("li");
+  for (let i = 0; i < menu_list.length; i++) {
+    if (menu_list[i].innerHTML.toLowerCase().includes(userInputValue)) {
+      menu_list[i].style.display = "";
+    } else {
+      menu_list[i].style.display = "none";
+    }
+    console.log("test");
+  }
+};
 
-input.addEventListener( 'keyup', search);
-add_btn.addEventListener( "click", addToList);
+search_input.addEventListener("keyup", search);
+add_btn.addEventListener("click", addToList);
+display_btn.addEventListener("click", displayData);
