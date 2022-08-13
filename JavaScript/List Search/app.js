@@ -13,6 +13,9 @@ const addToList = () => {
 };
 
 const displayData = () => {
+
+  list.textContent = '';
+
   data.forEach((item) => {
     let li = document.createElement("li");
     li.textContent = item;
