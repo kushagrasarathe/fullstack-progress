@@ -1,5 +1,5 @@
-let firstCard = 5;
-let secondCard = 8;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBalckJack = false;
@@ -11,6 +11,13 @@ let display_cards = document.querySelector("#cards");
 
 function startGame() {
     renderGame();
+}
+
+// random card function
+
+function getRandomCard() {
+  let random = Math.floor( Math.random() * 11 );
+  return random;
 }
 
 function renderGame() {
@@ -26,12 +33,17 @@ function renderGame() {
 
   display_message.textContent = message;
   display_sum.textContent = "Sum: " + sum ;
-  display_cards.textContent = "Cards: " +  cards[0] + " " +  cards[1];
+  // display_cards.textContent += "Cards: "
+  
+  for( let i = 0;  i < cards.length ; i++) {
+    display_cards.textContent += ' ' + cards[i] + ' ';
+  }
+
 }
 
 function newCard() {
     console.log("Drawing a new card from the deck!");
-    let card = 2;
+    let card = getRandomCard();
     sum += card;
     cards.push(card);
     renderGame();
