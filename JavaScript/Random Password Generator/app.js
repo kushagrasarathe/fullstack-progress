@@ -96,6 +96,7 @@ let first_pass = document.querySelector(".one");
 let second_pass = document.querySelector(".two");
 let generate_btn = document.querySelector(".btn");
 
+
 let arr_len = characters.length;
 
 const empty = "";
@@ -120,6 +121,5 @@ function generatePassword() {
   second_pass.textContent = pwd_two.join(''); 
 
 }
-
 
 generate_btn.addEventListener("click", generatePassword);
