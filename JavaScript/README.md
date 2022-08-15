@@ -254,6 +254,16 @@ arr.push('d');
 console.log(arr.length); // returns 4
 ```
 
+**Add element in first position in an array**
+To add element as first element in array we use `.unshift()` method.
+
+Example:
+
+```javascript
+arr.unshift('d');
+console.log(arr.length);
+```
+
 **Remove last item in array**
 To remove last element from an array we use `.pop()` method.
 
@@ -262,6 +272,16 @@ Example:
 ```javascript
 arr.pop();
 console.log( arr.length ); // returns 3
+```
+
+**Remove first item in array**
+To remove first element from an array we use `.shift()` method.
+
+Example:
+
+```javascript
+arr.shift();
+console.log( arr.length );
 ```
 
 ## Loops
