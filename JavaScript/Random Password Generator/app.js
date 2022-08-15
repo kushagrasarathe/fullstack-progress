@@ -96,25 +96,30 @@ let first_pass = document.querySelector(".one");
 let second_pass = document.querySelector(".two");
 let generate_btn = document.querySelector(".btn");
 
-let pwd_one = [];
-let pwd_two = [];
-
 let arr_len = characters.length;
 
-function generatePassword() {
-  for (let i = 1; i <= 15; i++) {
-    first_pass.textContent = pwd_one;
+const empty = "";
 
+let pwd_one
+let pwd_two
+
+function generatePassword() {
+
+  pwd_one = []
+  pwd_two = []
+
+  for (let i = 1; i <= 15; i++) {
     let random1 = Math.floor(Math.random() * arr_len);
     let random2 = Math.floor(Math.random() * arr_len);
 
     pwd_one.push(characters[random1]);
     pwd_two.push(characters[random2]);
     // console.log(pwd_one);
-    first_pass.textContent = pwd_one.join("");
-
-    second_pass.textContent = pwd_two.join("");
   }
+  first_pass.textContent = pwd_one.join('');
+  second_pass.textContent = pwd_two.join(''); 
+
 }
+
 
 generate_btn.addEventListener("click", generatePassword);
