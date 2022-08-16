@@ -5,6 +5,12 @@ const list = document.querySelector(".list");
 let myLeads = [];
 
 let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+
+if(leadsFromLocalStorage) {
+  myLeads= leadsFromLocalStorage;
+  renderLeads();
+}
+
 console.log(leadsFromLocalStorage);
 
 function save() {
