@@ -30,20 +30,20 @@ function render(leads) {
 
   for (i = 0; i < leads.length; i++) {
     listItems += `<li> 
-        <a target="_blank" href=${myLeads[i]}> ${myLeads[i]}  </a> 
+        <a target="_blank" href=${leads[i]}> ${leads[i]}  </a> 
         </li>`;
 
-    // console.log(myLeads[i]);
+    // console.log(leads[i]);
     
     //  using textContent renders as simple text
-    // list.textContent += myLeads[i] + '\n';
+    // list.textContent += leads[i] + '\n';
 
     // using inner html to render in li
-    // list.innerHTML += "<li>" + myLeads[i] + "</li>";
+    // list.innerHTML += "<li>" + leads[i] + "</li>";
 
     //  using createElement to create a li tag
     // const li = document.createElement('li');
-    // li.textContent = myLeads[i];
+    // li.textContent = leads[i];
     // list.appendChild(li);
 
   }
