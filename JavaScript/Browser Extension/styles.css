@@ -13,11 +13,19 @@ input {
     margin-bottom: 4px;
 }
 
-button {
+.input_btn {
     background: #5f9341;
     color: white;
     padding: 10px 20px;
-    border: none;
+    border: 2px solid #5f9341;
+    font-weight: bold;
+}
+
+.delete_btn {
+    background: white;
+    color: #5f9341;
+    padding: 10px 20px;
+    border: 2px solid #5f9341;
     font-weight: bold;
 }
 
