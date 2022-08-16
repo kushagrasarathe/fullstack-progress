@@ -9,7 +9,7 @@ const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
 if(leadsFromLocalStorage) {
   myLeads= leadsFromLocalStorage;
-  renderLeads();
+  render(myLeads);
 }
 
 console.log(leadsFromLocalStorage);
@@ -21,14 +21,20 @@ function save() {
   user_input.value = "";
   list.textContent = "";
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
-  renderLeads();
+  render(myLeads);
   console.log(localStorage.getItem("myLeads"));
 }
 
-function renderLeads() {
+function render(leads) {
   let listItems = "";
 
-  for (i = 0; i < myLeads.length; i++) {
+  for (i = 0; i < leads.length; i++) {
+    listItems += `<li> 
+        <a target="_blank" href=${myLeads[i]}> ${myLeads[i]}  </a> 
+        </li>`;
+
+    // console.log(myLeads[i]);
+    
     //  using textContent renders as simple text
     // list.textContent += myLeads[i] + '\n';
 
@@ -40,11 +46,6 @@ function renderLeads() {
     // li.textContent = myLeads[i];
     // list.appendChild(li);
 
-    listItems += `<li> 
-        <a target="_blank" href=${myLeads[i]}> ${myLeads[i]}  </a> 
-        </li>`;
-
-    // console.log(myLeads[i]);
   }
   list.innerHTML = listItems;
 }
@@ -54,7 +55,7 @@ delete_btn.addEventListener("dblclick", () => {
   localStorage.clear();
 
   myLeads = []; 
-  renderLeads(); 
+  render(myLeads); 
 
   // or
   // list.textContent = '';
