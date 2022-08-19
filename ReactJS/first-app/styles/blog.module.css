@@ -1,0 +1,22 @@
+.h1 {
+    font-size: 200px;
+}
+
+.hello {
+    background-color: white;
+    height: 50px;
+    padding: 1rem;
+}
+
+#id1 {
+    background-color: rgb(150, 196, 255);
+    height: 500px;
+}
+
+.image {
+    max-width: 250px;
+}
+/* 
+h1  {
+    font-size: 200px;
+} */
