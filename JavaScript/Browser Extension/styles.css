@@ -21,7 +21,7 @@ input {
     font-weight: bold;
 }
 
-.delete_btn {
+.delete_btn, .save_btn {
     background: white;
     color: #5f9341;
     padding: 10px 20px;

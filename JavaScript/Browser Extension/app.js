@@ -1,14 +1,21 @@
 const save_btn = document.querySelector(".input_btn");
+const savetab_btn = document.querySelector(".save_btn");
 const delete_btn = document.querySelector(".delete_btn");
 const user_input = document.querySelector(".input_el");
 const list = document.querySelector(".list");
 
 let myLeads = [];
 
+const tabs = [{ url: "https://www.linkedin.com/in/per-harald-borgen/" }];
+
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
-if(leadsFromLocalStorage) {
-  myLeads= leadsFromLocalStorage;
+function saveTab() {
+  console.log(tabs[0].url);
+}
+
+if (leadsFromLocalStorage) {
+  myLeads = leadsFromLocalStorage;
   render(myLeads);
 }
 
@@ -34,7 +41,7 @@ function render(leads) {
         </li>`;
 
     // console.log(leads[i]);
-    
+
     //  using textContent renders as simple text
     // list.textContent += leads[i] + '\n';
 
@@ -45,7 +52,6 @@ function render(leads) {
     // const li = document.createElement('li');
     // li.textContent = leads[i];
     // list.appendChild(li);
-
   }
   list.innerHTML = listItems;
 }
@@ -54,13 +60,12 @@ delete_btn.addEventListener("dblclick", () => {
   // console.log('clicked');
   localStorage.clear();
 
-  myLeads = []; 
-  render(myLeads); 
+  myLeads = [];
+  render(myLeads);
 
   // or
   // list.textContent = '';
-
-} )
-
+});
 
 save_btn.addEventListener("click", save);
+savetab_btn.addEventListener("click", saveTab);
