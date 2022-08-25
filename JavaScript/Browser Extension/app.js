@@ -6,12 +6,23 @@ const list = document.querySelector(".list");
 
 let myLeads = [];
 
-const tabs = [{ url: "https://www.linkedin.com/in/per-harald-borgen/" }];
 
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
 function saveTab() {
-  console.log(tabs[0].url);
+
+  chrome.tabs.query({
+    active: true,
+    currentWindow: true
+  }, function(tabs) {
+    console.log("tabs")
+    let url = tabs[0].url;
+    myLeads.push(url);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    render(myLeads); 
+  } )
+
+
 }
 
 if (leadsFromLocalStorage) {
