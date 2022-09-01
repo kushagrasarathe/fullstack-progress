@@ -9,6 +9,8 @@
 ## Variables in Golang
 
 **Variable declaration:**
+
 `var variable_name variable_type = value;`
 
 If you declare a variable and not use it, golang will throw error.
+If no value is initailized to a integer type variable, `0` is assigned as a default value, and for string type variable, an empty string is assigned.

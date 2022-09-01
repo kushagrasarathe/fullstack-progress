@@ -17,4 +17,15 @@ func main()  {
 	var smallVal uint8 = 255;
 	fmt.Println(smallVal);
 	fmt.Printf("Variable is of type: %T \n", smallVal);
+	
+	// float datatype
+	var smallFloat float32 = 255.25587843224542;
+	fmt.Println(smallFloat);
+	fmt.Printf("Variable is of type: %T \n", smallFloat);
+	
+	// default values
+	var newVariable int;
+	fmt.Println(newVariable);
+	fmt.Printf("Variable is of type: %T \n", newVariable);
 }
+

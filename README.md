@@ -5,4 +5,6 @@ Starting today ( 19/ 06/ 2022 ), I'll be working on learning fullstack developme
 
 1. [Git Basics](https://github.com/kushagrasarathe/fullstack-progress/tree/main/Git%20Basics)
 2. [HTML & CSS](https://github.com/kushagrasarathe/fullstack-progress/tree/main/HTML%20%26%20CSS)
-2. [JavaScript 101](https://github.com/kushagrasarathe/fullstack-progress/tree/main/JavaScript/)
+3. [JavaScript 101](https://github.com/kushagrasarathe/fullstack-progress/tree/main/JavaScript/)
+4. [React/NextJs Basics](https://github.com/kushagrasarathe/fullstack-progress/tree/main/ReactJS)
+5. [Golang Basics](https://github.com/kushagrasarathe/fullstack-progress/tree/main/Golang)
