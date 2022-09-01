@@ -3,6 +3,7 @@
 - Golang is a compiled language
 - Executlables are different for different OS
 - Almost everything in Go is Type
+- Theres no `try catch` in golang
 
 `go mod init variables`
 

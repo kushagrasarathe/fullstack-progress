@@ -40,6 +40,7 @@ func main()  {
 	fmt.Printf("Variable is of type: %T \n", website);
 	
 	// no var style, this way of declaring variables allows us to declare variable without using var keyword, this is only allowed inside a method/function, not outside
+	// also called the walrus operator
 	users := 2054056 ;
 	fmt.Println(users);
 	
