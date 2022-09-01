@@ -2,6 +2,12 @@ package main
 
 import "fmt"
 
+// this gives eror because this is invalid syntax and is only allowed inside function/method
+// not_so_secret_token := 30560321;
+
+// constant declaration, note constant variable should always start with capital letter, making it public and accessible to any file or program
+const LoginToken string = "anything";
+
 func main()  {
 	// string datatype
 	var username string = "Kushagra Sarathe";
@@ -27,5 +33,17 @@ func main()  {
 	var newVariable int;
 	fmt.Println(newVariable);
 	fmt.Printf("Variable is of type: %T \n", newVariable);
+	
+	// implicit type
+	var website = "https://kushagrasarathe.me";
+	fmt.Println(website);
+	fmt.Printf("Variable is of type: %T \n", website);
+	
+	// no var style, this way of declaring variables allows us to declare variable without using var keyword, this is only allowed inside a method/function, not outside
+	users := 2054056 ;
+	fmt.Println(users);
+	
+	fmt.Println(LoginToken);
+	fmt.Printf("Variable is of type: %T \n", LoginToken);
 }
 
