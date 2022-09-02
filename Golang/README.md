@@ -21,7 +21,7 @@
 
 To get the current time using Golang, we use the `time.Now()` method, this gives the current time in the following format:
 
-```go
+```
 2022-09-02 21:34:30.719384 +0530 IST m=+0.000091918
 ```
 
@@ -41,3 +41,5 @@ To build executables for any OS we use the following command:
 GOOS="windows" go build
 ```
 Here `GOOS` parameter is used to define which OS we want to build for. If we do nat pass this parameter, the command `go build` will create a executable for current OS.
+
+To see all other parameters use `go env` command in terminal.
