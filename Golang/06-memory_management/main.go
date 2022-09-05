@@ -11,7 +11,12 @@ func main() {
 
 	myNumber := 23
 
+	// here & is reference
 	var new_pointer *int = &myNumber
-	fmt.Println(new_pointer)
+	fmt.Println("Value of pointer is", new_pointer)
+	fmt.Println("Value of pointer is", *new_pointer)
+
+	*new_pointer = *new_pointer + 2
+	fmt.Println("New Value is:", myNumber)
 
 }
