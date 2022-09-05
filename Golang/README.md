@@ -45,3 +45,5 @@ GOOS="windows" go build
 Here `GOOS` parameter is used to define which OS we want to build for. If we do nat pass this parameter, the command `go build` will create a executable for current OS.
 
 To see all other parameters use `go env` command in terminal.
+
+## Pointers in Golang
