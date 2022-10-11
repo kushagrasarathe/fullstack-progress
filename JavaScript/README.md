@@ -284,6 +284,21 @@ arr.shift();
 console.log( arr.length );
 ```
 
+**array.map()**
+
+**Array Constructor**
+Array Constructor can be used to create arrays.
+
+```js
+const newConstructor = new Array(10) // 10 is the length of array here
+
+// to add values to array .fill method can be used
+const newConstructor = new Array(10).fill(🚀')
+```
+
+
+
+
 ## Object Destructuring
 
 Easily extract properties from objects and bind them to variables.

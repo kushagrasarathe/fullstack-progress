@@ -4,7 +4,6 @@ const player1 = {
     position: 'Founder Anti Vanshika DAO',
     avatar: 'https://pbs.twimg.com/profile_images/1477626278580785159/6Ht4K6yu_400x400.jpg',
     health: 60,
-    score: [3 ,1 ,4 ],
     diceCount: 3
 }
 
@@ -14,22 +13,35 @@ const player2 = {
     position: 'Founder Anti Abbas DAO',
     avatar: 'https://pbs.twimg.com/profile_images/1572132248140533760/6thFLwdb_400x400.jpg',
     health: 60,
-    score: [ 2],
     diceCount: 1
 }
 
+function getDiceHtml(diceCount){
+    return getDiceRollArray(diceCount).map(function(num){
+        return `<div class="dice">${num}</div>`
+    }).join('')
+}
 
 
+function getDiceRollArray( diceCount ) {
+    // const dices = []
+
+    return new Array(diceCount).fill(0).map( () => {
+        return( Math.floor(Math.random() * 6 + 1))
+    })
+
+    // for ( let i =0; i < diceCount; i++){
+    //     dices.push(Math.floor(Math.random() * 6 + 1))
+    // }    
+    // return dices
+}
+
+getDiceRollArray(5)
 
 function renderCharacter( data ) {
     
-    const { id, name, position, avatar, health, score, diceCount } = data
-    
-    let diceHtml = ''
-
-    for ( let i = 0 ; i < diceCount ; i++ ) {
-        diceHtml += `<div class="dice">${score[i]}</div>`
-    }
+    const { id, name, position, avatar, health, diceCount } = data
+    const diceHtml = getDiceHtml(diceCount)
 
     document.getElementById(id).innerHTML = `
     <div class="character-card">
