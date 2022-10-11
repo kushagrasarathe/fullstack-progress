@@ -284,5 +284,20 @@ arr.shift();
 console.log( arr.length );
 ```
 
-## Loops
+## Object Destructuring
 
+Easily extract properties from objects and bind them to variables.
+
+```js
+const favouriteFilm = {
+    title: "Top Gun",
+    year: "1986",
+    genre: "action",
+    star: "Tom Cruise",
+    director: "Tony Scott"
+} 
+
+const { title, year, name, star, direction } = favouriteFilm
+
+console.log(`My favourite film is ${title} starring ${star}. It's an ${genre} film that was directed by ${director} and released in ${year}`)
+```
