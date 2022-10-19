@@ -16,18 +16,14 @@ const player2 = {
     diceCount: 1
 }
 
-function getDiceHtml(diceCount){
-    return getDiceRollArray(diceCount).map(function(num){
-        return `<div class="dice">${num}</div>`
-    }).join('')
-}
 
 
-function getDiceRollArray( diceCount ) {
+
+function getDiceRollArray(diceCount) {
     // const dices = []
 
-    return new Array(diceCount).fill(0).map( () => {
-        return( Math.floor(Math.random() * 6 + 1))
+    return new Array(diceCount).fill(0).map(() => {
+        return (Math.floor(Math.random() * 6 + 1))
     })
 
     // for ( let i =0; i < diceCount; i++){
@@ -38,25 +34,42 @@ function getDiceRollArray( diceCount ) {
 
 getDiceRollArray(5)
 
-function renderCharacter( data ) {
-    
-    const { id, name, position, avatar, health, diceCount } = data
-    const diceHtml = getDiceHtml(diceCount)
+function Player(data) {
+    // this.id = data.id
+    // this.name = data.name
+    // this.position = data.position
+    // this.avatar = data.avatar
+    // this.health = data.health
+    // this.diceCount = data.diceCount
 
-    document.getElementById(id).innerHTML = `
-    <div class="character-card">
-        <h3 class="name"> ${name} </h3>
-        <span class="designation">${position}</span>
-        <img class="avatar" src="${avatar}" />
-        <p class="health">health: <b> ${health} </b></p>
-        <div class="dice-container">
-            ${diceHtml}
-        </div>
-    </div>`;
+    Object.assign(this, data)
+
+    this.getDiceHtml = function (diceCount) {
+        return getDiceRollArray(diceCount).map(function (num) {
+            return `<div class="dice">${num}</div>`
+        }).join('')
+    }
+
+
+    this.getCharacterHtml = function (data) {
+        const { id, name, position, avatar, health, diceCount } = this
+        let diceHtml = this.getDiceHtml(diceCount)
+
+        document.getElementById(id).innerHTML = `
+            <div class="character-card">
+            <h3 class="name"> ${name} </h3>
+            <span class="designation">${position}</span>
+                <img class="avatar" src="${avatar}" />
+                <p class="health">health: <b> ${health} </b></p>
+                <div class="dice-container">
+                    ${diceHtml}
+                </div>
+            </div>`;
+    }
 }
 
-renderCharacter(player1);
-renderCharacter(player2);
+const hero1 = new Player(player1)
+const hero2 = new Player(player2)
 
-
-
+hero1.getCharacterHtml()
+hero2.getCharacterHtml()

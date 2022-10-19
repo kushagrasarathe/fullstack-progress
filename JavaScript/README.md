@@ -339,21 +339,20 @@ console.log(animal1);
 Example of a flexible/dynamic constructor:
 
 ```js
-
 const animalForRelease1 = {
-    name: 'Tilly',
-    species: 'tiger',
-    weightKg: 56,
-    age: 2,
-    dateOfRelease: '03-02-2022'
-}
+  name: "Tilly",
+  species: "tiger",
+  weightKg: 56,
+  age: 2,
+  dateOfRelease: "03-02-2022",
+};
 const animalForRelease2 = {
-    name: 'Nelly',
-    species: 'elephant',
-    weightKg: 320,
-    age: 16,
-    dateOfRelease: '03-02-2022'
-}
+  name: "Nelly",
+  species: "elephant",
+  weightKg: 320,
+  age: 16,
+  dateOfRelease: "03-02-2022",
+};
 
 function Animal(data) {
   this.name = data.name;
@@ -363,6 +362,71 @@ function Animal(data) {
   this.dateOfRelease = data.dateOfRelease;
 }
 
-const tiger = new Animal(animalForRelease1)
-const elephant = new Animal(animalForRelease2)
+const tiger = new Animal(animalForRelease1);
+const elephant = new Animal(animalForRelease2);
+```
+
+### Constructor Function Methods
+
+Methods are properties on objects that contain functions.
+
+```js
+const animalForRelease1 = {
+  name: "Tilly",
+  species: "tiger",
+  weightKg: 56,
+  age: 2,
+  dateOfRelease: "03-02-2022",
+};
+const animalForRelease2 = {
+  name: "Nelly",
+  species: "elephant",
+  weightKg: 320,
+  age: 16,
+  dateOfRelease: "03-02-2022",
+};
+
+function Animal(data) {
+  this.name = data.name;
+  this.species = data.species;
+  this.weightKg = data.weightKg;
+  this.age = data.age;
+  this.dateOfRelease = data.dateOfRelease;
+
+  // method on constructor function
+  this.summariseAnimal = function () {
+    console.log(
+      `${this.name} is a ${this.age} year old ${this.species} which weighs ${this.weightKg}kg and was released into the wild on ${this.dateOfRelease}`
+    );
+  };
+}
+
+const tiger = new Animal(animalForRelease1);
+const elephant = new Animal(animalForRelease2);
+
+tiger.summariseAnimal();
+elephant.summariseAnimal();
+```
+
+## Object.assign
+
+Copies properties from a source object to a target object and returns a new version of the target object.
+
+Example:
+
+```js
+const studentDetails = {
+  firstName: "Kushagra",
+  lastName: "Sarathe",
+  age: 20,
+  country: "India",
+  email: "kushagra@test.com",
+  discordUsername: "kushargasarathe#9765",
+};
+
+const studentDetailsCopy = {};
+
+Object.assign(studentDetailsCopy, studentDetails);
+
+console.log(studentDetailsCopy);
 ```
