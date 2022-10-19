@@ -315,3 +315,54 @@ console.log(
   `My favourite film is ${title} starring ${star}. It's an ${genre} film that was directed by ${director} and released in ${year}`
 );
 ```
+
+## Constructor Functions
+
+A `constructor` is a special function that creates and initializes an object instance. In JavaScript, a constructor gets called when an object is created using the `new` keyword. The purpose of a constructor is to create a new object and set values for any existing object properties.
+
+Example of constructor:
+
+```js
+function Animal() {
+  this.species = "tiger";
+  this.weightKg = 56;
+  this.age = 2;
+}
+
+// Note: **this** keyword refers to the new object we are creating
+
+const animal1 = new Animal();
+
+console.log(animal1);
+```
+
+Example of a flexible/dynamic constructor:
+
+```js
+
+const animalForRelease1 = {
+    name: 'Tilly',
+    species: 'tiger',
+    weightKg: 56,
+    age: 2,
+    dateOfRelease: '03-02-2022'
+}
+const animalForRelease2 = {
+    name: 'Nelly',
+    species: 'elephant',
+    weightKg: 320,
+    age: 16,
+    dateOfRelease: '03-02-2022'
+}
+
+function Animal(data) {
+  this.name = data.name;
+  this.species = data.species;
+  this.weightKg = data.weightKg;
+  this.age = data.age;
+  this.dateOfRelease = data.dateOfRelease;
+}
+
+const tiger = new Animal(animalForRelease1)
+const elephant = new Animal(animalForRelease2)
+```
