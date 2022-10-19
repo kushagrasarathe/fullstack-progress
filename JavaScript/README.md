@@ -250,7 +250,7 @@ To add elements to array we use `.push()` method.
 Example:
 
 ```javascript
-arr.push('d');
+arr.push("d");
 console.log(arr.length); // returns 4
 ```
 
@@ -260,7 +260,7 @@ To add element as first element in array we use `.unshift()` method.
 Example:
 
 ```javascript
-arr.unshift('d');
+arr.unshift("d");
 console.log(arr.length);
 ```
 
@@ -271,7 +271,7 @@ Example:
 
 ```javascript
 arr.pop();
-console.log( arr.length ); // returns 3
+console.log(arr.length); // returns 3
 ```
 
 **Remove first item in array**
@@ -281,7 +281,7 @@ Example:
 
 ```javascript
 arr.shift();
-console.log( arr.length );
+console.log(arr.length);
 ```
 
 **array.map()**
@@ -290,14 +290,11 @@ console.log( arr.length );
 Array Constructor can be used to create arrays.
 
 ```js
-const newConstructor = new Array(10) // 10 is the length of array here
+const newConstructor = new Array(10); // 10 is the length of array here
 
 // to add values to array .fill method can be used
-const newConstructor = new Array(10).fill(🚀')
+const newConstructor = new Array(10).fill("🚀");
 ```
-
-
-
 
 ## Object Destructuring
 
@@ -305,14 +302,16 @@ Easily extract properties from objects and bind them to variables.
 
 ```js
 const favouriteFilm = {
-    title: "Top Gun",
-    year: "1986",
-    genre: "action",
-    star: "Tom Cruise",
-    director: "Tony Scott"
-} 
+  title: "Top Gun",
+  year: "1986",
+  genre: "action",
+  star: "Tom Cruise",
+  director: "Tony Scott",
+};
 
-const { title, year, name, star, direction } = favouriteFilm
+const { title, year, name, star, direction } = favouriteFilm;
 
-console.log(`My favourite film is ${title} starring ${star}. It's an ${genre} film that was directed by ${director} and released in ${year}`)
+console.log(
+  `My favourite film is ${title} starring ${star}. It's an ${genre} film that was directed by ${director} and released in ${year}`
+);
 ```
