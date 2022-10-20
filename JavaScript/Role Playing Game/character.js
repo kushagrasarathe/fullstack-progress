@@ -1,4 +1,4 @@
-import getDiceRollArray from './utils.js'
+import { getDiceRollArray, getDicePlaceholderHtml } from './utils.js'
 
 export default function Player(data) {
     // this.id = data.id
@@ -11,14 +11,29 @@ export default function Player(data) {
     Object.assign(this, data)
 
     this.getDiceHtml = function (diceCount) {
-        return getDiceRollArray(diceCount).map(function (num) {
+        this.currentDiceScore= getDiceRollArray(this.diceCount)
+        this.diceArray = this.currentDiceScore.map( (num) => {
             return `<div class="dice">${num}</div>`
         }).join('')
+    } 
+    
+    this.diceArray = getDicePlaceholderHtml(this.diceCount)
+
+    this.takeDamage = function(attackScoreArray) {
+        const totalAttackScore = attackScoreArray.reduce( function(total, next) {
+            return total + next
+        } ) 
+
+        this.health -= totalAttackScore
+
+        this.health <= 0 ? this.health = 0 : this.health
+
+        // console.log(`${totalAttackScore} `)
+        // console.log(`${this.name}: ${attackScoreArray} `)
     }
 
-
     this.getCharacterHtml = function () {
-        const { id, name, position, avatar, health, diceCount } = this
+        const { id, name, position, avatar, health, diceCount, diceArray } = this
         let diceHtml = this.getDiceHtml(diceCount)
 
         return `
@@ -28,8 +43,11 @@ export default function Player(data) {
                 <img class="avatar" src="${avatar}" />
                 <p class="health">health: <b> ${health} </b></p>
                 <div class="dice-container">
-                    ${diceHtml}
+                    ${diceArray}
                 </div>
             </div>`;
     }
+
+
+
 }

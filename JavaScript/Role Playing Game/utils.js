@@ -1,4 +1,4 @@
-export default function getDiceRollArray(diceCount) {
+function getDiceRollArray(diceCount) {
     // const dices = []
 
     return new Array(diceCount).fill(0).map(() => {
@@ -10,3 +10,11 @@ export default function getDiceRollArray(diceCount) {
     // }    
     // return dices
 }
+
+function getDicePlaceholderHtml(diceCount){
+    return new Array(diceCount).fill(0).map(function(){
+        return `<div class="placeholder-dice"></div>`
+    }).join('')
+}
+
+export { getDiceRollArray, getDicePlaceholderHtml}
