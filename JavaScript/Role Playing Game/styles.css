@@ -40,8 +40,9 @@ main {
 .character-card {
   /* height:14rem; */
   margin-top: 0.5rem;
-  width: 94vw;
+  /* width: 94vw; */
   max-width: 250px;
+  min-height: 520px;
   padding: 1vh 1vw;
   font-size: 1.6rem;
   color: white;
