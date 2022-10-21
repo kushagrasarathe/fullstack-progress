@@ -26,8 +26,11 @@ export default function Player(data) {
 
         this.health -= totalAttackScore
 
-        this.health <= 0 ? this.health = 0 : this.health
-
+        // this.health <= 0 ? this.health = 0 : this.health
+        if (this.health <= 0){
+            this.dead = true   
+            this.health = 0
+        } 
         // console.log(`${totalAttackScore} `)
         // console.log(`${this.name}: ${attackScoreArray} `)
     }

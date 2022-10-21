@@ -13,6 +13,14 @@ function attack() {
     hero2.takeDamage(hero1.currentDiceScore)
     render()
 
+    if(hero1.dead === true || hero2.dead === true){
+        endGame();
+    }
+
+}
+
+function endGame(){
+    console.log("the Game is over !!!")
 }
 
 function render() {
