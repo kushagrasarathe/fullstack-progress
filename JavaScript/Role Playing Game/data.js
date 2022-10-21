@@ -13,7 +13,7 @@ const characterData = {
         position: 'Founder Anti Abbas DAO',
         avatar: 'https://pbs.twimg.com/profile_images/1572132248140533760/6thFLwdb_400x400.jpg',
         health: 60,
-        diceCount: 1,
+        diceCount: 3,
         currentDiceScore: []
     }
 }
