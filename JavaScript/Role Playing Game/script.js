@@ -2,6 +2,14 @@ import { characterData } from "./data.js";
 import { getDiceRollArray } from "./utils.js";
 import Player from "./character.js";
 
+let playersArray = ["Abbas", "Vanshika", "Kushagra", "Samarth"]
+
+const getNewPlayer = () => {
+  const nextPlayerData = characterData[playersArray.shift()]
+  return nextPlayerData ? new Player(nextPlayerData) : {} ;
+}
+// console.log(nextPlayerData)
+
 function attack() {
   // console.log('attack button working')
   // getDiceRollArray()
@@ -48,4 +56,7 @@ function render() {
 document.getElementById("attack-button").addEventListener("click", attack);
 const hero1 = new Player(characterData.player1);
 const hero2 = new Player(characterData.player2);
+
+let monster = getNewPlayer();
+
 render();
