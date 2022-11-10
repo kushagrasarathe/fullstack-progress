@@ -430,3 +430,22 @@ Object.assign(studentDetailsCopy, studentDetails);
 
 console.log(studentDetailsCopy);
 ```
+
+## Promises
+
+Promises in JS execute the code in background and notifies after the execution is finished using `.then` and `.catch`.
+
+```js
+let prom = new Promise((resolve, reject) => {
+  console.log("Promise pending");
+  setTimeout(() => {
+    console.log("I'm a promise & I'm fulfilled");
+    resolve(true)
+    // reject(new Error("Errorrrrrrrrrr!!!!"));
+  }, 5000);
+});
+
+console.log(prom);
+```
+
+## Async/Await
