@@ -440,12 +440,27 @@ let prom = new Promise((resolve, reject) => {
   console.log("Promise pending");
   setTimeout(() => {
     console.log("I'm a promise & I'm fulfilled");
-    resolve(true)
-    // reject(new Error("Errorrrrrrrrrr!!!!"));
+    // resolve(true)
+    reject(new Error("Errorrrrrrrrrr!!!!"));
   }, 5000);
 });
 
 console.log(prom);
+
+// do this after promise is resolved
+prom.then((value) => {
+  console.log(value)
+})
+
+//  error handling
+prom.catch((value) => {
+  console.log("Error found in promise")
+})
+
 ```
+
+### Promise chaining
+
+
 
 ## Async/Await

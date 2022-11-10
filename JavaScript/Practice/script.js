@@ -127,3 +127,5 @@ msg.classList.toggle('bg');
 // modifying element style
 msg.style.color = 'white';
 msg.style.background = 'red';
+
+
