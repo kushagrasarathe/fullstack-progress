@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Extension</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="flex flex-col items-center justify-center">
+    <div>
+      <h1 class="mt-4 text-xl text-center font-semibold py-4">
+        YouTube Timeframe tracker
+      </h1>
+
+      <div class="flex flex-col justify-start mb-3 p-4">
+        <div class="">
+          <label
+            for="exampleFormControlInput1"
+            class="form-label inline-block mb-2 text-gray-700"
+            >Enter Timestamp:</label
+          >
+          <input
+            type="text"
+            class="time_frame w-full form-control block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            id="exampleFormControlInput1"
+            placeholder="Example 1.1"
+          />
+        </div>
+        <div class="mt-4 flex items-center justify-center">
+          <button
+            type="button"
+            class="save_tab mr-3 w-32 input_btn inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+          >
+            Save Video
+          </button>
+          <button
+            type="button"
+            class="delete_all ml-3 w-32 inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out"
+          >
+            Delete All
+          </button>
+        </div>
+        <div class="mt-5">
+          <h1>Saved Videos:</h1>
+          <ul class="saved_list"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./app.js"></script>
+</html>

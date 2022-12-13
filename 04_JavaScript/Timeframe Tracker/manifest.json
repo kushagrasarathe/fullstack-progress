@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "version": "0.1",
+    "name": "Time Frame Tracker",
+    "description": "Save timeframe of any youtube video and resume it later, helpul when watching long videos and courses on YouTube" ,
+    "action": {
+        "default_popup": "index.html"
+    }, 
+    "permissions": [
+        "tabs"
+    ]
+}

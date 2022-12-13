@@ -5,6 +5,10 @@ body {
     min-width: 400px;
 }
 
+button {
+    cursor: pointer;
+}
+
 input {
     width: 50%;
     padding: 10px;
