@@ -1,0 +1,32 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #b1bcff;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bored-bot {
+    color: #111111;
+}
+
+.activity {
+    font-size: 18px;
+}
+
+.call-api-btn {
+    position: absolute;
+    top: 20%;
+    padding: 8px 12px;
+    background: #bcd5ff;
+    border-radius: 5px;
+    border: 2px solid rgb(31, 33, 39);
+}
+
+.call-api-btn:active {
+    background: #a4c4fb;
+}
