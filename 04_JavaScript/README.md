@@ -126,6 +126,14 @@ if (food == "pizza") {
 }
 ```
 
+Nested ternary condition example:
+
+```js
+function greater(first, last) {
+  return first > last ? first : last > first ? last : undefined;
+}
+```
+
 <br/>
 
 ## Functions
