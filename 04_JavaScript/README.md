@@ -594,4 +594,16 @@ promise_rejected.then((value) => {
 });
 ```
 
+## Fetch API
+
+The fetch api allows us to fetch data from resources asynchronously.
+
+Example:
+
+```js
+fetch('https://apis.scrimba.com/bored/api/activity', {method: "GET"})
+.then(response => response.json())
+.then(data => console.log(data))
+```
+
 ## Async/Await
