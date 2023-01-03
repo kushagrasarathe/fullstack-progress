@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlogSpace</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+
+<body class="bg-violet-200 w-full">
+    <nav class="fixed w-full top-0 bg-violet-500 py-4 px-6">
+        <span class="text-xl text-white font-semibold">Welcome to BlogSpace!</span>
+    </nav>
+
+    <form id="new_post" class=" bg-violet-100 mt-24 mx-6 mb-6">
+        <div class="flex flex-col items-start jusitfy-center border rounded-md border-gray-500 p-6">
+            <span class="text-xl font-normal mb-4">Create new post:</span>
+            <label for="post_title">Title:</label>
+            <input id="post_title" class=" w-full rounded-sm mt-2" type="text" />
+            <label for="post_body">Body:</label>
+            <textarea id="post_body" rows="4" class=" w-full rounded-sm mt-2"></textarea>
+            <button id="submit" class="mt-4 font-semibold bg-blue-500 px-4 py-2 rounded-sm text-white cursor-pointer">Post</button>
+        </div>
+    </form>
+
+    <span class="text-xl font-normal  mx-6 mb-4">Popular Posts:</span>
+    <div class="m-6 my-10 mt-4" id="blogs_el">
+
+    </div>
+</body>
+<script src="./app.js"></script>
+
+</html>
