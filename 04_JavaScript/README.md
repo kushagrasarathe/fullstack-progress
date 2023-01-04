@@ -601,9 +601,43 @@ The fetch api allows us to fetch data from resources asynchronously.
 Example:
 
 ```js
-fetch('https://apis.scrimba.com/bored/api/activity', {method: "GET"})
-.then(response => response.json())
-.then(data => console.log(data))
+fetch("https://apis.scrimba.com/bored/api/activity", { method: "GET" })
+  .then((response) => response.json())
+  .then((data) => console.log(data));
 ```
+
+Sending a post request using fetch api using body object:
+
+```js
+fetch("https://apis.scrimba.com/jsonplaceholder/todos", {
+  method: "POST",
+  body: JSON.stringify({
+    title: "Go to gym and workout for an hour",
+    completed: true,
+  }),
+})
+  .then((res) => res.json())
+  .then((data) => console.log(data));
+```
+
+Using headers to send JSON data:
+
+```js
+fetch("https://apis.scrimba.com/jsonplaceholder/todos", {
+  method: "POST",
+  body: JSON.stringify({
+    title: "Go to gym and workout for an hour",
+    completed: true,
+  }),
+  headers: {
+      'Content-Type': 'application/json'
+},
+})
+  .then((res) => res.json())
+  .then((data) => console.log(data));
+```
+
+
+
 
 ## Async/Await
