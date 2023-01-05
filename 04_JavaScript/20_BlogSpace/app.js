@@ -52,7 +52,13 @@ document.querySelector("#new_post").addEventListener("submit", (event) => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      postArray.unshift(data)
-      renderPost()
+      postArray.unshift(data);
+      renderPost();
+
+      // reset form
+      document.getElementById("new_post").reset()
+      // or
+      // postTitle.value = ""
+      // postBody.value = ""
     });
 });
