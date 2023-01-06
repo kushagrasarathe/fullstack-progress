@@ -202,3 +202,136 @@ function removeOccurrences(arr, num) {
     }
   }
 }
+
+// 🏁 Your Goal: Accumulate the Pizza Orders
+// Given an array of pizza orders, return the total number of pizzas ordered.
+// The orders are an array of objects, each with pizzas key inside:
+// const orders = [
+//     { pizzas: 3 },
+//     { pizzas: 5 },
+//     { pizzas: 10 }
+// ];
+
+function numberOfPizzas(orders) {
+  let total = 0;
+  for (i = 0; i < orders.length; i++) {
+    total += orders[i].pizzas;
+  }
+  return total;
+}
+
+// 🏁 Your Goal: Find the Number of Keys
+// Given an object, find the number of keys inside the object. Return this number.
+
+function numberOfKeys(object) {
+  return Object.keys(object).length;
+}
+
+// 🏁 Your Goal: Find the Shorter String
+// The function shortestString takes two string arguments: str1 and str2.
+// Determine which of the two strings is shorter, return that string.
+
+function shortestString(str1, str2) {
+  return str1.length < str2.length ? str1 : str2;
+}
+
+// 🏁 Your Goal: Halve 'em! 🔪
+// The function halfValue takes an array of numbers. It should return a new array with all the original values halved.
+// Odd numbers should be rounded up to the nearest whole number.
+
+function halfValue(numbers) {
+  return numbers.map((num) => Math.ceil(num / 2));
+}
+
+// 🏁 Your Goal: Count the C's
+// The function countC takes a string str as its only argument.
+// This function should return the number of c's found in the string. It must count both lower-case c and upper-case C.
+
+function countC(str) {
+  let total = 0;
+  let arr = str.split("");
+  arr.map((char) => {
+    if (char.toLowerCase() === "c") {
+      return (total += 1);
+    }
+  });
+  return total;
+}
+
+// Count Vowels
+// Write a function countVowels that takes in a string and counts how many vowels there are in the word. Vowels include: "a", "e", "i", "o", and "u".
+// Handle lowercase and uppercase vowels.
+
+function countVowels(str) {
+  let vowelCount = 0;
+  let vowels = ["a", "e", "i", "o", "u"];
+  let arr = str.split("");
+  arr.map((item) => {
+    for (i = 0; i < arr.length; i++) {
+      if (item.toLowerCase() === vowels[i]) {
+        vowelCount += 1;
+      }
+    }
+  });
+  return vowelCount;
+}
+
+// Reverse
+// Write a function reverse that takes a string as an argument and returns a string with all the letters reversed.
+// For example, reverse("cat") would return the string "tac".
+
+function reverse(string) {
+  return string.split("").reverse().join("");
+}
+
+// Palindrome
+// Write a function isPalindrome that takes a word string and returns true if the word is a palindrome or false if it is not.
+// A palindrome is a word that is spelled the same forwards as it is backwards.
+
+function isPalindrome(string) {
+  return string.split("").reverse().join("") === string ? true : false;
+}
+
+// Sum Together
+// Write a function sumTogether that takes two arrays of numbers and returns a single array with the sum of each corresponding index value.
+// Assume both arrays are the same length.
+
+function sumTogether(arr1, arr2) {
+  let arr = [];
+  for (i = 0; i < arr1.length; i++) {
+    arr.push(arr1[i] + arr2[i]);
+  }
+  return arr;
+}
+
+// Count the Elements
+// Write a function countElements that takes in an array and returns an object a count of each element in the array.
+
+function countElements(arr) {
+  let obj = {};
+  for (item of arr) {
+    obj[item] = obj[item] ? obj[item] + 1 : 1;
+  }
+  return obj;
+}
+// Player Hand Score
+// The function playerHandScore that takes in a string of face cards (Jack, Queen, and King only) and returns the total score of the players hand.
+// The cards are represented by the first letter in the name of the card:
+//     A "K" is 4 points
+//     A "Q" is 3 points
+//     A "J" is 2 points
+
+function playerHandScore(hand) {
+  let total = 0;
+
+  for (i = 0; i < hand.length; i++) {
+    if (hand.charAt(i) === "K") {
+      total += 4;
+    } else if (hand.charAt(i) === "Q") {
+      total += 3;
+    } else if (hand.charAt(i) === "J") {
+      total += 2;
+    }
+  }
+  return total;
+}
