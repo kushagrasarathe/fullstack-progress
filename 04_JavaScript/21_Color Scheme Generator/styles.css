@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+
+html {
+    background-color: #1C1C1C;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    /* text-decoration: underline; */
+    word-spacing: 3px;
+    letter-spacing: 2px;
+}
+
+.container {
+    margin: 0rem auto;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#select_color {
+    margin: 1rem;
+    width: 80px;
+    height: 50px;
+    cursor: pointer;
+    background: #1C1C1C;
+    border-radius: 5px;
+    border: 2px solid #afb6ff;
+
+}
+
+#color_scheme {
+    margin: 1rem;
+    padding: 12px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid #afb6ff;
+}
+
+#color_scheme:hover {
+    background-color: #212124;
+}
+
+#fetch_colors {
+    cursor: pointer;
+    margin: 1rem;
+    padding: 12px;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid #afb6ff;
+}
+
+#fetch_colors:hover {
+    background-color: #212124;
+}
+
+.all-colors {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    /* justify-content: center;
+    align-items: center; */
+    /* width: 100%; */
+}
+
+.color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem;
+    width: 120px;
+    height: 450px;
+    
+}
+
+.color-title {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 30px;
+    cursor: pointer;
+    /* max-width: 20ch; */
+}

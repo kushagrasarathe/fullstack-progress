@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,27 @@
     <title>Color Scheme Generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div id="main">
-        <input id="select_color" type="color">
-        <select name="" id="color_scheme">
-            <option value="Monochrome">Monochrome</option>
-            <option value="Monochrome-dark">Monochrome-dark</option>
-            <option value="Monochrome-light">Monochrome-light</option>
-            <option value="Analogic">Analogic</option>
-            <option value="Complement">Complement</option>
-            <option value="Analogic-Complement">Analogic-Complement</option>
-            <option value="Traid">Traid</option>
-        </select>
-        <button id="fetch_colors">Get Color Scheme</button>
-        <div id="display_colors" class="">
+    <div class="container">
+            <h1 class="title">Color Scheme Generator</h1>
+            <div class="main">
+                <input id="select_color" type="color">
+                <select name="" id="color_scheme">
+                    <option value="Monochrome">Monochrome</option>
+                    <option value="Monochrome-dark">Monochrome-dark</option>
+                    <option value="Monochrome-light">Monochrome-light</option>
+                    <option value="Analogic">Analogic</option>
+                    <option value="Complement">Complement</option>
+                    <option value="Analogic-Complement">Analogic-Complement</option>
+                    <option value="Triad">Traid</option>
+                </select>
+                <button id="fetch_colors">Get Color Scheme</button>
+            </div>
+            <div id="display_colors" class="all-colors">
+            </div>
         </div>
-    </div>
-    
 </body>
 <script src="./app.js"></script>
+
 </html>

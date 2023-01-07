@@ -21,18 +21,29 @@ function fetchColors() {
 }
 
 function renderColors(data) {
+  console.log(data);
   let html = "";
-  for (color of data) {
-    html += `
-        <div class="color">
-          <div class="display-color" style="background: ${color.hex};" onclick="copyText()">
-            <h2 class="">${color.name}<br>
-            ${color.hex}</h2>
+  data.map((color) => {
+    return (html += `
+        <div class="colors">
+          <div class="color" style="background: ${color.hex};"">
+          <span class="color-title">${color.name}<br>
+          ${color.hex}</span>
           </div>
-      </div>
-        `;
-  }
+      </div>`);
+  });
+  //   for (color of data) {
+  //     html += `
+  //         <div class="colors">
+  //           <div class="color" style="background: ${color.hex};")">
+  //             <h2 class="">${color.name}<br>
+  //             ${color.hex}</h2>
+  //           </div>
+  //       </div>
+  //         `;
+  //   }
   document.querySelector("#display_colors").innerHTML = html;
 }
 
+fetchColors();
 document.querySelector("#fetch_colors").addEventListener("click", fetchColors);
