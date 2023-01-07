@@ -323,3 +323,81 @@ function playerHandScore(hand) {
   }
   return total;
 }
+
+// 🏁 Your Goal: Handle an Undefined
+// The double function here is almost complete! We also want double to be able to handle when x is undefined.
+
+function double(x) {
+  return x * 2 || 0;
+}
+
+// 🏁 Your Goal: Go Scuba Diving!
+// We're going Scuba Diving! 🐠
+// We need a function that can determine if the diver can breathe. The function canBreathe will be passed three boolean values:
+//     isConnected - Is true if the diver connected to the tank
+//     hasOxygen - Is true if the tank has oxygen
+//     aboveWater - Is true if the diver is still above water
+
+function canBreathe(isConnected, hasOxygen, aboveWater) {
+  return (isConnected && hasOxygen) || aboveWater ? true : false;
+}
+
+// 🏁 Your Goal: Guard it
+// The function friendName currently retrieves the name property from the friend.
+// The problem is, sometimes friend is undefined. When this is the case, let's return undefined without throwing an exception.
+
+function friendName(friend) {
+  return friend && friend.name;
+}
+
+// 🏁 Your Goal: Car Crossing the Bridge
+// There's a river that runs right between two towns. In order for cars to cross the river, we built a bridge!
+// XOR
+// Trouble is, there's only room for 1 car to cross the bridge at a time. This means that if both cars were to be crossing at the same time, neither would be able to cross.
+// Complete the carCrossing function to return true if and only if one car is crossing.
+
+function carCrossing(aCrossing, bCrossing) {
+  return (aCrossing && !bCrossing) || (!aCrossing && bCrossing) ? true : false;
+}
+
+// 🏁 Your Goal: Throw an Error
+// Time to throw your first error! Simply throw a new error inside the throwError function.
+// If you throw an error properly the tests will catch the error and you will pass the stage!
+
+function throwError() {
+  throw new Error("you got an error");
+}
+
+// 🏁 Your Goal: Catch an Error!
+// The argument fn is a function that will throw an error when invoked. Catch the error that is thrown when invoking fn.
+// The tests will pass as long as the function is called and the exception is caught.
+
+function catchError(fn) {
+  try {
+    fn();
+  } catch (e) {
+    e;
+  }
+}
+
+// 🏁 Your Goal: Return in our Function
+// Modify catchError to return the error if one is thrown.
+// If no error is thrown, return false.
+
+function catchError(fn) {
+  try {
+    fn();
+  } catch (e) {
+    return e;
+  }
+  return false;
+}
+
+// 🏁 Your Goal: Start an Error
+// Pick an error from one of the situations mentioned in details. Write code that will make one of these errors occur.
+// As long as any of the error types mentioned above are thrown, the test cases will pass.
+
+function startError() {
+  return z;
+}
+
