@@ -413,3 +413,56 @@ function startError() {
   return z;
 }
 
+// 🏁 Your Goal: Convert to Number
+// Given a string, convert it to a number.
+// If the string is not a number, return 0.
+
+function toNumber(string) {
+  const num = Number(string);
+  if (isNaN(num)) {
+    return 0;
+  }
+  return num;
+}
+
+// 🏁 Your Goal: Combine Two Values
+// Given two values a and b, combine them together as strings and return the result. The values may be a number, a boolean or a string
+
+function combineToString(a, b) {
+  return a.toString() + b.toString();
+}
+
+// 🏁 Your Goal: Is it Truthy?
+// Given some value a return whether or not the value is truthy.
+
+function isTruthy(a) {
+  return a ? true : false;
+}
+
+// 🏁 Your Goal: Is Loosely Equal?
+// Return true if a and b are loosely equal to each other. If not, return false.
+
+function looseEquals(a, b) {
+  return a == b ? true : false;
+}
+
+// 🏁 Your Goal: To JSON
+// Given an object, turn it into JSON and return the resulting string.
+
+function toJSON(obj) {
+  return JSON.stringify(obj);
+}
+
+// 🏁 Your Goal: Create Valid JSON
+// Create JSON that can be parsed to a person object with 3 properties:
+//     name: with any string value
+//     age: with any number value
+//     isReal: with any boolean value
+
+const personJSON = `
+    {
+        "name": "Kushagra",
+        "age": 21,
+        "isReal": true 
+    } 
+`;
