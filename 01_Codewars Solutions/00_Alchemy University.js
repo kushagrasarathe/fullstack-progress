@@ -466,3 +466,126 @@ const personJSON = `
         "isReal": true 
     } 
 `;
+
+// EITHER NOT BOTH
+// 1: Either Not Both
+// Either Not Both
+// Write a function eitherNotBoth that takes in a number and returns true if the the number is divisible by either 3 or 5, but not both. Return false otherwise.
+
+function eitherNotBoth(num) {
+  let check = false;
+  if (num % 3 === 0 && num % 5 === 0) {
+    return check;
+  } else if (num % 3 === 0) {
+    check = true;
+  } else if (num % 5 === 0) {
+    check = true;
+  }
+  return check;
+}
+
+// Fizz Buzz
+
+// Write a function fizzBuzz that takes an array of numbers and replaces any number divisible by three with the word "fizz" and any number divisible by five with the word "buzz". If a number is divisible by both three and five, replace it with "fizzbuzz"
+
+// Once the appropriate numbers are replaced, return a concatenated string with only the words "fizz" or "buzz" included.
+
+// const numbers = [1, 3, 5, 9, 11, 12, 20];
+// fizzBuzz(numbers); // returns "fizzbuzzfizzfizzbuzz"
+
+function fizzBuzz(numbers) {
+  let newArr = [];
+
+  numbers.map((num) => {
+    if (num % 3 === 0 && num % 5 === 0) {
+      newArr.push("fizzbuzz");
+    } else if (num % 3 === 0 && num % 5 != 0) {
+      newArr.push("fizz");
+    } else if (num % 5 === 0 && num % 3 !== 0) {
+      newArr.push("buzz");
+    }
+  });
+  return newArr.join("");
+}
+
+// 🏁 Your Goal: Get Name
+
+// Create a function which retrieves the property name on this.
+
+// You can expect the property to exist. Example:
+
+// const name = thisName.call({ name: 'Ted' });
+
+// console.log(name); // Ted
+
+function thisName() {
+  return this.name;
+}
+
+// 🏁 Your Goal: Bind it Bob
+
+// Create a new function from thisName that is bound to an object with the name "Bob".
+
+// Export this new function instead of thisName.
+
+// When it is called, it should return "Bob":
+
+// const result = newFunction();
+
+// console.log(result); // "Bob"
+
+function thisName() {
+  return this.name;
+}
+
+const newFunc = thisName.bind({ name: "Bob" });
+
+module.exports = newFunc;
+
+// 🏁 Your Goal: Add Get Name
+
+// Add a function getName to the obj that will retrieve the name when it is called on an object.
+
+// For example:
+
+// const name = obj.getName();
+
+// console.log(name); // Bob
+
+const obj = {
+  name: "Bob",
+  getName: function () {
+    return this.name;
+  },
+};
+
+// 🏁 Your Goal: Fix the Context
+
+// Within the function Celebrity, a method is used to fetch the celebrity's age. The second argument to fetchAge is a callback function. The callback function will receive age as an argument.
+
+//     ⚠️ Unfortunately, due to the function call-site, this will be re-defined to not refer to the celebrity. Running the tests without modifying the code will result in a TypeError.
+
+// Fix this.age to refer to the same this as the function Celebrity.
+
+const fetchAge = require("./fetchAge");
+
+function Celebrity(name) {
+  this.name = name;
+
+  fetchAge(this.name, (age) => {
+    this.age = age;
+  });
+}
+
+// or
+
+const fetchAge = require("./fetchAge");
+
+function Celebrity(name) {
+  const that = this;
+  that.name = name;
+
+  fetchAge(this.name, function (age) {
+    that.age = age;
+  });
+}
