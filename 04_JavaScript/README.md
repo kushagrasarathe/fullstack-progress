@@ -324,6 +324,12 @@ console.log(
 );
 ```
 
+## `this` in JavaScript
+
+## Prototypes
+
+## Classes
+
 ## Constructor Functions
 
 A `constructor` is a special function that creates and initializes an object instance. In JavaScript, a constructor gets called when an object is created using the `new` keyword. The purpose of a constructor is to create a new object and set values for any existing object properties.
@@ -637,7 +643,7 @@ fetch("https://apis.scrimba.com/jsonplaceholder/todos", {
   .then((data) => console.log(data));
 ```
 
-
+## Callback functions
 
 
 ## Async/Await
