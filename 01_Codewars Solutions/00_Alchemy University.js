@@ -589,3 +589,290 @@ function Celebrity(name) {
     that.age = age;
   });
 }
+
+// 🏁 Your Goal: Complete the Shape Function
+
+// The Shape function will take two arguments: x and y. Store these values in an object position on the instance (this).
+
+//     🔍 For reference see this example. The tests will invoke Shape with the new keyword, creating an object and setting it to this within the function.
+
+// The position should have keys x and y containing the corresponding values:
+
+// const shape = new Shape(5, 10);
+
+// console.log(shape.position.x) // 5
+// console.log(shape.position.y) // 10
+
+//     👁️ Notice that position is an object with two keys x and y!
+
+// Our Shape "Constructor"
+function Shape(x, y) {
+  // store x and y in this.position
+  this.position = { x, y };
+}
+
+// 🏁 Your Goal: Add Move Function
+
+// Create a function move that will be added to the Shape.prototype. This function should take two arguments: x and y.
+
+// It should move the shape's position by adding the corresponding arguments value:
+
+// const shape = new Shape(1, 1);
+
+// shape.move(1, 4);
+
+// console.log( shape.position.x ); // 2
+// console.log( shape.position.y ); // 5
+
+// Our Shape "Constructor"
+function Shape(x, y) {
+  // store x and y in this.position
+  this.position = { x, y };
+}
+
+Shape.prototype.move = function (x, y) {
+  this.position.x += x;
+  this.position.y += y;
+};
+
+// 🏁 Your Goal: Complete the Circle Function
+
+// In Circle.js, you'll need to do two things:
+
+//     Pass the arguments to Shape via call.
+
+//     👁️ Notice we are binding Circle with this using call. This way when Shape is invoked, it will store x and y on the Circle instance!
+
+//     Store radius on our Circle instance. You can do this exactly how we stored position on the Shape class.
+
+// The final result behavior should be:
+
+// const circle = new Circle(5,10,15);
+
+// console.log(circle.position.x); // 5
+// console.log(circle.position.y); // 10
+// console.log(circle.radius); // 15
+
+const Shape = require("./Shape");
+
+function Circle(x, y, radius) {
+  Shape.call(this, x, y);
+  // store radius on this
+  this.radius = radius;
+}
+
+// 🏁 Your Goal: Link the prototypes
+
+// Use Object.create to link Circle.prototype to Shape.prototype.
+
+// This will ensure that any methods on Shape.prototype will also become available on new Circle instances. For instance, we'll be able to use circle.move(1,1); just like we did on the shape instance!
+
+const Shape = require("./Shape");
+
+function Circle(x, y, radius) {
+  Shape.call(this, x, y);
+  this.radius = radius;
+}
+
+Circle.prototype = Object.create(Shape.prototype);
+
+module.exports = Circle;
+
+// 🏁 Your Goal: Complete the Rectangle
+
+// Complete the Rectangle function and link its prototype to Shape's prototype.
+
+// This will be similar to our Circle! Rectangle will be a Shape plus a couple properties: height and width. We'll want to store these on the Rectangle instance.
+
+// const rect = new Rectangle(0, 0, 20, 40);
+
+// console.log(rect.x, rect.y); // 0, 0
+// console.log(rect.height, rect.width); // 20, 40
+
+const Shape = require("./Shape");
+
+function Rectangle(x, y, height, width) {
+  Shape.call(this, x, y);
+  this.height = height;
+  this.width = width;
+}
+
+Rectangle.prototype = Object.create(Shape.prototype);
+
+module.exports = Rectangle;
+
+// 🏁 Your Goal: Create a Flip Function
+
+// Create a function flip on the rectangle prototype! This function will switch the height and width dimensions of the rectangle. It will take no arguments.
+
+//     🔑 You may need to store a temporary variable in order to flip the dimensions!
+
+// Example:
+
+// const rectangle = new Rectangle(10, 20);
+
+// console.log(rectangle.height, rectangle.width); // 10, 20
+
+// rectangle.flip();
+
+// console.log(rectangle.height, rectangle.width); // 20, 10
+
+//     ⚠️ Be careful you don't declare the method flip on Rectangle.prototype before using Object.create! The Object.create method will return a completely new object to which you can attach the method.
+
+const Shape = require("./Shape");
+
+function Rectangle(x, y, height, width) {
+  Shape.call(this, x, y);
+  this.height = height;
+  this.width = width;
+  temp = this.width;
+}
+
+Rectangle.prototype = Object.create(Shape.prototype);
+
+Rectangle.prototype.flip = function () {
+  const width = this.width;
+  this.width = this.height;
+  this.height = width;
+};
+
+// 🏁 Your Goal: Hero Health
+
+// Within your constructor function, add a health property to a hero instance and set it to 50.
+
+// When creating a new hero, it should work like this:
+
+// const hero = new Hero();
+
+// console.log(hero.health); // 50
+
+class Hero {
+  constructor() {
+    this.health = 50;
+  }
+}
+
+module.exports = Hero;
+
+// 🏁 Your Goal: Take Damage method
+
+// Add a method takeDamage to the hero class. This method should take one number argument representing the damage. This number should be directly subtracted from the hero's health.
+
+// For example:
+
+// const hero = new Hero();
+
+// console.log(hero.health); // 50
+
+// hero.takeDamage(5);
+
+// console.log(hero.health); // 45
+
+class Hero {
+  constructor() {
+    this.health = 50;
+  }
+  takeDamage(num) {
+    this.health -= num;
+  }
+}
+
+// 🏁 Your Goal: Extend Hero
+
+// In the new file, Warrior.js, modify the Warrior to extend the Hero class.
+
+//     No need to add anything to Warrior just yet, simply extend the class for now!
+
+const Hero = require("./Hero");
+
+class Warrior extends Hero {}
+
+// 🏁 Your Goal: Add Rage
+
+// Add a rage property to the Warrior. The value of rage will start at 0.
+
+// const warrior = new Warrior();
+
+// console.log(warrior.rage); // 0
+
+const Hero = require("./Hero");
+
+class Warrior extends Hero {
+  constructor() {
+    super();
+    this.rage = 0;
+  }
+}
+
+// 🏁 Your Goal: Extend takeDamage
+
+// Add a method takeDamage to the Warrior class that will increment rage by 1 each time the warrior takes damage.
+
+// It should also invoke takeDamage method on Hero which will inflict the damage on the hero's health.
+
+// const warrior = new Warrior();
+
+// console.log(warrior.health, warrior.rage); // 50, 0
+
+// warrior.takeDamage(10);
+
+// console.log(warrior.health, warrior.rage); // 40, 1
+
+//     Be sure to pass the damage argument into the super.takeDamage call!
+
+const Hero = require("./Hero");
+
+class Warrior extends Hero {
+  constructor() {
+    super();
+    this.rage = 0;
+  }
+  takeDamage(damage) {
+    super.takeDamage(damage);
+    this.rage += 1;
+  }
+}
+
+// 🏁 Configurable Health
+
+// Final Task! Let's make both the Hero and Warrior classes have configurable health.
+
+// When creating a warrior/hero, we'll pass a number which should be stored as their health:
+
+// const warrior1 = new Warrior(50);
+// const warrior2 = new Warrior(25);
+// const hero1 = new Hero(10);
+
+// console.log(warrior1.health); // 50
+// console.log(warrior2.health); // 25
+// console.log(hero1.health); // 10
+
+// Arguments that are passed when calling a class with new will be passed directly to the constructor.
+
+//     You'll need to change the constructor of both the Hero and Warrior for this one!
+
+class Hero {
+  constructor(health) {
+    this.health = health;
+  }
+  takeDamage(damage) {
+    this.health -= damage;
+  }
+}
+
+//
+
+const Hero = require("./Hero");
+
+class Warrior extends Hero {
+  constructor(health) {
+    super(health);
+    this.rage = 0;
+  }
+  takeDamage(damage) {
+    super.takeDamage(damage);
+    this.rage += 1;
+  }
+}
+
+
