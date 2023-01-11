@@ -12,6 +12,18 @@ body {
     justify-content: space-between;
 }
 
+.main {
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+.main p {
+    color: white;
+    margin: 10px;
+    font-weight: 600;
+}
+
 button {
     background-color: #FFF100;
     cursor: pointer;
@@ -53,3 +65,24 @@ h2 {
     text-align: center;
 }
 
+
+#drwa-card:disabled {
+    cursor: not-allowed;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#computer-score, #user-score {
+    text-align: center;
+    color: white;
+}
+
+#final-result {
+    text-align: center;
+    color: white;
+}
