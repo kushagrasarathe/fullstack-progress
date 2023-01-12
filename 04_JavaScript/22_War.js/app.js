@@ -11,46 +11,35 @@ const winner = document.getElementById("winner");
 const remainingCards = document.getElementById("remaining");
 const finalResult = document.getElementById("final-result");
 
-function handleClick() {
-    fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
-        .then((res) => res.json())
-        .then((data) => {
-            remainingCards.textContent = `Remaining Cards: ${data.remaining}`
-            console.log(data);
-            deckId = data.deck_id;
-
-        });
+async function handleClick() {
+    const res = await fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
+    const data = await res.json()
+    remainingCards.textContent = `Remaining Cards: ${data.remaining}`
+    console.log(data);
+    deckId = data.deck_id;
 }
 
 newDeckBtn.addEventListener("click", handleClick);
 
-drawBtn.addEventListener("click", () => {
-    fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
-        .then((res) => res.json())
-        .then((data) => {
-            // data.cards.map( (card) =>{
-            //     const cardImg = card.image
-            //     document.getElementById("cards").innerHTML += `<img src=${cardImg} />`
-            // } )
-            remainingCards.textContent = `Remaining Cards: ${data.remaining}`
-            // console.log(data)
-            cardsContainer.children[0].innerHTML = `
-            <img class="card-img" src=${data.cards[0].image} />
-            `;
-            cardsContainer.children[1].innerHTML = `
-            <img class="card-img" src=${data.cards[1].image} />
-            `;
-            chooseWinner(data.cards[0], data.cards[1]);
-            if (data.remaining === 0) {
-                drawBtn.disabled = true
-                if( computerScore > myScore ) {
-                    finalResult.textContent = "Computer won the game"
-                } else if( myScore > computerScore ) {
-                    finalResult.textContent = "You won the game"
-                }
-            }
-
-        });
+drawBtn.addEventListener("click", async () => {
+    const res = await fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
+    const data = await res.json()   
+    remainingCards.textContent = `Remaining Cards: ${data.remaining}`
+    cardsContainer.children[0].innerHTML = `
+    <img class="card-img" src=${data.cards[0].image} />
+    `;
+    cardsContainer.children[1].innerHTML = `
+    <img class="card-img" src=${data.cards[1].image} />
+    `;
+    chooseWinner(data.cards[0], data.cards[1]);
+    if (data.remaining === 0) {
+        drawBtn.disabled = true
+        if( computerScore > myScore ) {
+            finalResult.textContent = "Computer won the game"
+        } else if( myScore > computerScore ) {
+            finalResult.textContent = "You won the game"
+        }
+    }
 });
 
 //  choose winner function
