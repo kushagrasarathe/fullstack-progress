@@ -1,5 +1,4 @@
 # WELCOME
-<<<<<<< HEAD
 Starting today ( 19/ 06/ 2022 ), I'll be working on learning fullstack development, starting from basics and will be updating this repository as I move forward with my learning. I'll also be sharing my progress over [twitter](https://twitter.com/kushagrasarathe).
 
 ## Content
@@ -11,6 +10,3 @@ Starting today ( 19/ 06/ 2022 ), I'll be working on learning fullstack developme
 5. [NodeJs Basics](https://github.com/kushagrasarathe/fullstack-progress/tree/main/05_NodeJs)
 6. [React/NextJs Basics](https://github.com/kushagrasarathe/fullstack-progress/tree/main/06_ReactJS)
 7. [Golang Basics](https://github.com/kushagrasarathe/fullstack-progress/tree/main/07_Golang)
-=======
-This repository has my react projects that I built during my 100 Days code challenge, I've planned to rebuild these in future.
->>>>>>> react-projects
