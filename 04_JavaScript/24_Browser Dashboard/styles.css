@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}    
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 0px 20px #aaaaaa;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    /* padding: 15px; */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+}
+
+.bottom {
+    padding: 10px 0;
+    width: 100%;
+    background-color: black;
+    /* position: absolute;
+    bottom: 0px;
+    left: 0px; */
+    color: white;
+    font-size: 18px;
+}
+
+.bottom a {
+    padding: 0px 20px;
+    text-shadow: 1px 1px 2px #272931;
+}
