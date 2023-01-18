@@ -16,6 +16,7 @@ fetch(
     // console.log(data);
     document.body.style.background = `url(${data.urls.full})`;
     document.body.style.backgroundSize = `100%`;
+    document.body.style.backgroundRepeat = `no-repeat`;
     document.getElementById(
       "author"
     ).innerHTML = `<a style="color: white" href=${data.user.links.html} target="_blank">By: ${data.user.name}</a>`;
