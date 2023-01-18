@@ -98,10 +98,14 @@ main {
   margin: 0 auto;
   position: relative;
   margin-top: 40px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .meme--image {
-  max-width: 100%;
+  max-width: 500px;
+  margin: 0 auto  ;
   border-radius: 3px;
   /* margin-left: 32.5%; */
 }
