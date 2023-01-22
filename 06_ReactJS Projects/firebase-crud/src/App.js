@@ -28,8 +28,8 @@ function App() {
 
   const deleteUser = async (id) => {
     const userDoc = doc(db, "users", id);
-    await deleteDoc(userDoc, id)
-  }
+    await deleteDoc(userDoc, id);
+  };
 
   useEffect(() => {
     const getUsers = async () => {
@@ -41,39 +41,61 @@ function App() {
   }, []);
 
   return (
-    <div className="">
-      <input
-        type="text"
-        placeholder="name"
-        onChange={(e) => {
-          setNewName(e.target.value);
-        }}
-      />
-      <input
-        type="number"
-        placeholder="age"
-        onChange={(e) => {
-          setNewAge(e.target.value);
-        }}
-      />
-      <button onClick={createUser}>Create User</button>
-
-      {users.map((user, key) => {
-        return (
-          <div key={key}>
-            <h1>Name: {user.name}</h1>
-            <h1>Age: {user.age}</h1>
-            <button
-              onClick={() => {
-                updateAge(user.id, user.age);
-              }}
-            >
-              Increase Age
-            </button>
-            <button onClick={() => {deleteUser(user.id)}}>Delete User</button>
-          </div>
-        );
-      })}
+    <div className=" mt-10  w-full">
+      <h1 className=" text-center mb-3 text-3xl font-semibold"> Firebase Crud Practice</h1>
+      <div className=" flex flex-col items-center justify-center">
+        <input
+          className="my-2 shadow appearance-none border rounded w-52 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Enter name"
+          onChange={(e) => {
+            setNewName(e.target.value);
+          }}
+        />
+        <input
+          className="my-2 shadow appearance-none border rounded w-52 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="number"
+          placeholder="Enter Age"
+          onChange={(e) => {
+            setNewAge(e.target.value);
+          }}
+        />
+        <button
+          className="my-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          onClick={createUser}
+        >
+          Create User
+        </button>
+      </div>
+      <h1 className=" text-center text-3xl mt-10 font-semibold"> Users </h1>
+      <div className=" flex justify-around flex-wrap items-center my-5">
+        {users.map((user, key) => {
+          return (
+            <div className=" bg-slate-900 px-6 py-4 rounded-md my-2 flex flex-col justify-center items-start" key={key}>
+              <span className=" text-lg font-semibold text-cyan-300">Name: <span className="text-gray-200  font-bold text-xl leading-8 tracking-wide">{user.name}</span></span>
+              <span className=" text-lg font-semibold text-cyan-300">Age: <span className=" text-gray-200 font-bold text-xl leading-8 tracking-wide">{user.age}</span></span>
+              <div className=" mt-4 ">
+              <button
+                className="focus:outline-none mr-3 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
+                onClick={() => {
+                  updateAge(user.id, user.age);
+                }}
+              >
+                Increase Age
+              </button>
+              <button
+                className="focus:outline-none ml-3 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                onClick={() => {
+                  deleteUser(user.id);
+                }}
+              >
+                Delete User
+              </button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
