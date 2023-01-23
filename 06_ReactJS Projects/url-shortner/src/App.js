@@ -15,7 +15,7 @@ function App() {
       method: "POST",
       headers: {
         "content-type": "application/x-www-form-urlencoded",
-        "X-RapidAPI-Key": "34ca990222msh5e51d9541d739c5p1e261ejsn6a5cec2b7797",
+        "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
         "X-RapidAPI-Host": "url-shortener-service.p.rapidapi.com",
       },
       body: encodedParams,
