@@ -14,9 +14,14 @@ interface ResultArray {
 
 function App() {
   const [quiz, setQuiz] = useState<ResultArray[]>([]);
-
+  const [score, setScore] = useState<number>(0)
+  
+  useEffect(() => {
+    getQuiz();
+  }, []);
+  
   const getQuiz = () => {
-    fetch("https://opentdb.com/api.php?amount=5&type=multiple")
+    fetch("https://opentdb.com/api.php?amount=5&type=multiple&category=18")
       .then((res) => {
         if (!res.ok) {
           throw new Error("HTTP error " + res.status);
@@ -28,20 +33,14 @@ function App() {
       });
   };
 
-  useEffect(() => {
-    getQuiz();
-  }, []);
-  // console.log(quiz);
 
   return (
-    <div className="App">
-      <h1>Quizical Trivia</h1>
-      <div> 
-
-    {
-      quiz?.map( (obj, key) => <Question key={key} question={obj.question} options={obj.incorrect_answers} answer={obj.correct_answer} /> )
-    }
-
+    <div className=" py-5">
+      <h1 className=" text-center text-2xl font-bold my-4 underline">Quizical Trivia </h1>
+      <div>
+        {
+          quiz?.map((obj, key) => <Question key={key} question={obj.question} options={obj.incorrect_answers} answer={obj.correct_answer} />)
+        }
       </div>
     </div>
   );
