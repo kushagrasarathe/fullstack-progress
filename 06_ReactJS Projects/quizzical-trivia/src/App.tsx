@@ -39,7 +39,7 @@ function App() {
       <h1 className=" text-center text-2xl font-bold my-4 underline">Quizical Trivia </h1>
       <div>
         {
-          quiz?.map((obj, key) => <Question key={key} question={obj.question} options={obj.incorrect_answers} answer={obj.correct_answer} />)
+          quiz?.map((obj, key) => <Question key={key} question={obj.question} options={obj.incorrect_answers} answer={obj.correct_answer}  />)
         }
       </div>
     </div>
