@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 export default function Quiz(props) {
-    const [result, setResult] = useState(0)
 
     // {
     //     quiz1: '',
@@ -40,15 +39,16 @@ export default function Quiz(props) {
         // console.log(answers);
 
         for (let i = 0; i < 5; i++) {
-            if(submitted[i]){
+            if (submitted[i]) {
 
                 submitted[i] === answers[i] ?
-                console.log(`Option ${i + 1} is correct`) :
-                console.log(`Option ${i + 1} is wrong`)
+                    props.setScore(prevScore => prevScore + 1) :
+                    console.log(`Option ${i + 1} is wrong, correct answer is ${answers[i]}`) 
             } else {
-                console.log(`You didn't choose an option for question ${i+1}`);
+                console.log(`You didn't choose an option for question ${i + 1}`);
             }
         }
+
 
         // if (submitted[0] === answers[0]) {
         //     console.log("Quiz 1 Correct")
@@ -67,6 +67,7 @@ export default function Quiz(props) {
         //                 }
 
     }
+    // console.log(score)
 
     // setInterval(() => console.log("User SWelected Options: " + setUserSelectedArr, "\n" + "Correct Options: " + setCorrectAnswers), 15000)
 
@@ -95,6 +96,13 @@ export default function Quiz(props) {
                     onClick={submitAnswers}
                     type="button" className="my-4 mx-3 inline-block px-6 py-2.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out">Submit Answers</button>
             </div>
+            <div>
+                <h2>Score:{props.score}</h2>
+            </div>
+
+            <button
+            onClick={props.resetGame}
+            type="button" className="my-4 mx-3 inline-block px-6 py-2.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out">Reset Game</button>
         </div>
     )
 }

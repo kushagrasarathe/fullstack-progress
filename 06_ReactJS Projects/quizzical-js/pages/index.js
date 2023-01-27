@@ -6,6 +6,7 @@ export default function Home() {
 
   const [quiz, setQuiz] = useState([])
   const [options, setOptions] = useState([])
+  const [score, setScore] = useState(0)
 
   useEffect(() => {
     fetchData()
@@ -29,11 +30,13 @@ export default function Home() {
 
         quizArr.push({
           id: idx,
-          question: obj.question.replace(/&#039;/g, "'").replace(/&#62;/g, ">").replace(/&#60;/g, "<").replace(/&apos;/g, "'").replace(/&amp;/g, "&")
-            .replace(/"&quot;/g, '"')
+          question: obj.question
+            .replace(/&#039;/g, "'").replace(/&#62;/g, ">").replace(/&#60;/g, "<").replace(/&apos;/g, "'").replace(/&amp;/g, "&")
+            .replace(/&quot;/g, '"')
             .replace(/&apos;/g, "'")
             .replace(/&gt;/g, ">")
-            .replace(/&lt;/g, "<"),
+            .replace(/&lt;/g, "<")
+            ,
           options: obj.incorrect_answers,
           correct_answer: obj.correct_answer,
         });
@@ -47,6 +50,11 @@ export default function Home() {
 
   // setInterval( () =>  console.log(correctAnswers), 1000)
 
+  function resetGame() {
+    fetchData()
+    setScore(0)
+  }
+
   return (
     <>
       <Head>
@@ -57,7 +65,10 @@ export default function Home() {
       </Head>
       <main>
         <div>
-          <Quiz quizArr={quiz} allOptions={options} />
+          <Quiz quizArr={quiz} allOptions={options} score={score} setScore={setScore} resetGame={resetGame} />
+          {/* <button
+            onClick={() => fetchData()}
+            type="button" className="my-4 mx-3 inline-block px-6 py-2.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out">Reset Game</button> */}
         </div>
       </main>
     </>
