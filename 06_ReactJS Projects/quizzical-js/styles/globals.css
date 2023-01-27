@@ -14,6 +14,10 @@ body {
   overflow-x: scroll;
   background-color: #F5F7FB;
   color: #293264;
+  background-image: url('../public/blob1.png'), url('../public/blob2.png');
+  background-repeat: no-repeat;
+  background-position: top, bottom;
+  background-position-x: right, left;
 }
 
 

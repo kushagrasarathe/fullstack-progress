@@ -49,14 +49,8 @@ export default function Quiz(props) {
         setBool[index] = "wrong";
         props.setIsCorrect(setBool);
       }
-      // : console.log(
-      //     `Option ${index + 1} is wrong, correct answer is ${
-      //       answers[index].option
-      //     }`
-      //   );
     });
 
-    console.log(userSelected);
 
     // for (let i = 0; i < 5; i++) {
     //   if (submitted[i].option ) {
@@ -78,7 +72,7 @@ export default function Quiz(props) {
           return (
             <div className=" my-4 " key={index}>
               <div className=" flex justify-between flex-wrap items-center">
-                <h3 className=" m-2  text-lg font-normal ">{quiz.question}</h3>
+                <h3 className=" m-2  text-lg font-normal max-w-xl">{quiz.question}</h3>
                 <span className=" text-base">{props.isCorrect[index]}</span>
               </div>
               <div className=" flex justify-between items-stretch flex-wrap">
@@ -95,7 +89,7 @@ export default function Quiz(props) {
                       className={`
                       border
                        border-[#4D5B9E]
-                     text-black px-3 py-2 rounded-md md:w-64 w-36 m-2 mt-4 cursor-pointer hover:bg-blue-300 bg-[#D6DBF5] `}
+                     text-black px-3 py-2 rounded-md md:w-64 w-36 m-2 mt-4 cursor-pointer hover:bg-[#BAC5FA] bg-[#D6DBF5] `}
                       //  [#D6DBF5]
                       key={idx}
                     >
@@ -135,6 +129,13 @@ export default function Quiz(props) {
           className="my-4 mx-4 inline-block px-6 py-2.5 bg-[#4D5B9E] text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-[#3d4d9c] hover:shadow-lg focus:bg-[#3d4d9c] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
         >
           Reset Game
+        </button>
+        <button
+          onClick={props.newGame}
+          type="button"
+          className="my-4 mx-4 inline-block px-6 py-2.5 bg-[#4D5B9E] text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-[#3d4d9c] hover:shadow-lg focus:bg-[#3d4d9c] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+        >
+          New Game
         </button>
       </div>
     </div>

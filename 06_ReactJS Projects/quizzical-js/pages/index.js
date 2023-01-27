@@ -1,3 +1,4 @@
+import CreateQuiz from '@/components/CreateQuiz';
 import Quiz from '@/components/Quiz';
 import Head from 'next/head'
 import { useEffect, useState } from 'react';
@@ -7,23 +8,20 @@ export default function Home() {
   const [quiz, setQuiz] = useState([])
   const [score, setScore] = useState(0)
   const [isCorrect, setIsCorrect] = useState([]);
+  const [category, setCategory] = useState(0)
+  const [difficulty, setDifficulty] = useState('')
+  const [startGame, setStartGame] = useState(false)
 
-  useEffect(() => {
-    fetchData()
-  }, [])
-
-
-  async function fetchData() {
+  async function fetchData(category, difficulty) {
     try {
       const response = await fetch(
-        "https://opentdb.com/api.php?amount=5&type=multiple&category=18"
+        `https://opentdb.com/api.php?amount=5&type=multiple&category=${category}&difficulty=${difficulty}`
       );
       const data = await response.json();
 
       let quizArr = [];
 
       data.results.map((obj, idx) => {
-        // console.log(obj);
         const randomNum = Math.floor(Math.random() * 4);
         obj.incorrect_answers.splice(randomNum, 0, obj.correct_answer);
 
@@ -46,10 +44,9 @@ export default function Home() {
     }
   }
 
-  // setInterval( () =>  console.log(correctAnswers), 1000)
 
-  function resetGame() {
-    fetchData()
+  function resetGame(category, difficulty) {
+    fetchData( category, difficulty )
     setScore(0)
     setIsCorrect([])
   }
@@ -62,15 +59,27 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className=' md:px-12 px-3 py-5'> 
-        <div className=' flex justify-between items-center flex-wrap '>
-        <h1 className=' font-bold  m-2 mb-0 text-3xl'>Quizzical Trivia</h1>
-        <span className=' m-2 mb-0 text-lg'>Score: {score}</span>
+
+
+
+      {
+        startGame ? <main className=' md:px-12 px-3 py-5'>
+
+          <div className=' flex justify-between items-center flex-wrap '>
+            <h1 className=' font-bold  m-2 mb-0 text-3xl'>Quizzical Trivia</h1>
+            <span className=' m-2 mb-0 text-lg'>Score: {score} / 5</span>
+          </div>
+          <div>
+            <Quiz quizArr={quiz} isCorrect={isCorrect} setIsCorrect={setIsCorrect} score={score} setScore={setScore} resetGame={() => resetGame(category, difficulty) } newGame={() => setStartGame(false)} />
+          </div>
+        </main> : <div>
+          <CreateQuiz startGame={() => {
+            fetchData(category, difficulty)
+            setStartGame(true)
+          }} category={setCategory} difficulty={setDifficulty} />
         </div>
-        <div>
-          <Quiz quizArr={quiz} isCorrect={isCorrect} setIsCorrect={setIsCorrect} score={score} setScore={setScore} resetGame={resetGame} />
-        </div>
-      </main>
+      }
+
     </>
   )
 }
