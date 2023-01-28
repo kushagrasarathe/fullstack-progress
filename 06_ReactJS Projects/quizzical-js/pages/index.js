@@ -18,6 +18,7 @@ export default function Home() {
         `https://opentdb.com/api.php?amount=5&type=multiple&category=${category}&difficulty=${difficulty}`
       );
       const data = await response.json();
+      console.log(data)
 
       let quizArr = [];
 
