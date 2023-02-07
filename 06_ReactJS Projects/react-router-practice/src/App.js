@@ -32,6 +32,7 @@ function App() {
 
       {/* Navbar component created using new createBrowserRouter function */}
       <Navbar />
+      <h1>Kis</h1>
     </>
   );
 }
