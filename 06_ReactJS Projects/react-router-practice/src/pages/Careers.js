@@ -8,7 +8,7 @@ export default function Careers() {
   return (
     <div>
       {carrers.map( carrer => (
-        <Link  to={'/'} key={carrer.id}>
+        <Link  to={carrer.id.toString()} key={carrer.id}>
             <div className=' mt-5 w-full bg-purple-900 bg-opacity-25 py-4 px-6 ' >
 
             <p className=' hover:text-purple-300 underline'>{carrer.title}</p>

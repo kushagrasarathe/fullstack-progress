@@ -21,6 +21,7 @@ import Error404 from "./Error404";
 import Home from "../pages/Home";
 import CareersLayout from "../Layouts/CareersLayout";
 import Careers, { carrersLoader } from "../pages/Careers";
+import CareerDetails, { carrerDetailsLoader } from "../pages/CareerDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -34,6 +35,7 @@ const router = createBrowserRouter(
       </Route>
       <Route path="careers" element={<CareersLayout />}>
         <Route index element={<Careers />}  loader={carrersLoader}  />
+        <Route path=":id" element={<CareerDetails />} loader={carrerDetailsLoader} />
       </Route>
 
       {/* <Route path="*" element={<Error404 />} /> */}
