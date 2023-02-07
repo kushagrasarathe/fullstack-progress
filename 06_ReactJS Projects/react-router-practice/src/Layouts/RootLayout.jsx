@@ -21,6 +21,9 @@ export default function RootLayout() {
           <NavLink className={" font-semibold px-2 rounded-sm"} to={"help"}>
             Help
           </NavLink>
+          <NavLink className={" font-semibold px-2 rounded-sm"} to={"careers"}>
+            Careers
+          </NavLink>
         </nav>
       </header>
       <main className=" my-6">
