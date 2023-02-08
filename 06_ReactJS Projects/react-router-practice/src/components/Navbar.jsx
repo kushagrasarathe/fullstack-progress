@@ -11,6 +11,9 @@ import {
 // pages
 import Dashboard from "../pages/Dashboard";
 import About from "../pages/About";
+import Careers, { carrersLoader } from "../pages/Careers";
+import CareerDetails, { carrerDetailsLoader } from "../pages/CareerDetails";
+import CareersError from "./CareersError";
 
 // layouts
 import RootLayout from "../Layouts/RootLayout";
@@ -20,8 +23,6 @@ import ContactUs from "../pages/ContactUs";
 import Error404 from "./Error404";
 import Home from "../pages/Home";
 import CareersLayout from "../Layouts/CareersLayout";
-import Careers, { carrersLoader } from "../pages/Careers";
-import CareerDetails, { carrerDetailsLoader } from "../pages/CareerDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,9 +34,9 @@ const router = createBrowserRouter(
         <Route path="faq" element={<Faq />} />
         <Route path="contact" element={<ContactUs />} />
       </Route>
-      <Route path="careers" element={<CareersLayout />}>
+      <Route path="careers" element={<CareersLayout />} errorElement={<CareersError/>} >
         <Route index element={<Careers />}  loader={carrersLoader}  />
-        <Route path=":id" element={<CareerDetails />} loader={carrerDetailsLoader} />
+        <Route path=":id" element={<CareerDetails />} loader={carrerDetailsLoader}  />
       </Route>
 
       {/* <Route path="*" element={<Error404 />} /> */}
