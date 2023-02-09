@@ -1,26 +1,44 @@
 import React from "react";
-import createBoard from "../utils/createBoard";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export default function Board() {
-  //   function createLayout(rows, columns) {
-  //     let arr = [];
-  //     let value = 1;
+  const [layout, setLayout] = useState([]);
 
-  //     for (let i = 0; i < rows; i++) {
-  //       const random = Math.floor(Math.random() * 9);
-  //       arr[i] = [];
+  useEffect(() => {
+    function newLayout() {
+      const newBoard = createLayout(10, 8, 40);
+      setLayout(newBoard);
+    }
+    newLayout();
+  }, []);
 
-  //       for (let j = 0; j < columns; j++) {
-  //         arr[i][j] = value++;
-  //       }
-  //     }
-  //     // console.table(arr);
-  //     return arr;
-  //   }
+  function setAdjacentMinesCount(arr, row, col) {
+    let minI = Math.max(row - 1, 0);
+    let minJ = Math.max(col - 1, 0);
 
-  //   const randomNumArray = Array(10)
-  //     .fill()
-  //     .map(() => Math.floor(Math.random() * 9));
+    let maxI = Math.min(row + 1, arr.length -1 );
+    let maxJ = Math.min(col + 1, arr[0].length - 1);
+
+    let minesCount = 0;
+
+
+    // console.log("row " + row, minI, maxI, " col " + col, minJ,  maxJ)
+
+    for (let i = minI; i <= maxI; i++) {
+      for (let j = minJ; j <= maxJ; j++) {
+        // console.log( i, j, row, col)
+        if (i !== row || j !== col) {
+          console.log(i, j)  
+          if (arr[i][j] === "x") {
+            minesCount++;
+            // console.log( minesCount)
+          }
+        }
+      }
+    }
+    return minesCount;
+  }
 
   function createLayout(rows, columns, mines) {
     let arr = [];
@@ -39,16 +57,22 @@ export default function Board() {
         mines--;
       }
     }
+
+    for (let i = 0; i < rows; i++) {
+      for (let j = 0; j < columns; j++) {
+        if (arr[i][j] !== "x") {
+          arr[i][j] = setAdjacentMinesCount(arr, i, j);
+          // console.log(i, j, arr[i][j])
+        } 
+      }
+    }
+
     return arr;
   }
 
-//   console.table(createLayout( 10, 8, 10 ))
-//   console.table(createBoard( 10, 8, 10 ))
-
-
   return (
     <div>
-      {createLayout(10, 8, 10).map((item, index) => (
+      {layout.map((item, index) => (
         <div className={`grid grid-cols-8`} key={index}>
           {item.map((el, idx) => (
             <div

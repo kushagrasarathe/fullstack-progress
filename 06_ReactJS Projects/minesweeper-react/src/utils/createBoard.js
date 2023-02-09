@@ -1,4 +1,4 @@
-const createBoard = (rows, columns, mines) => {
+export default function createBoard(rows, columns, mines) {
 
     if (mines > rows * columns) {
         mines = (rows * columns) / 3
@@ -24,12 +24,5 @@ const createBoard = (rows, columns, mines) => {
         }
 
     }
-
-console.table(gridArr)
-
-
     return gridArr;
 }
-
-
-export default createBoard 
